@@ -1465,7 +1465,7 @@
       <result resourceOrUnit="submarine" quantity="1"/>
     </productionRule>
     <productionRule name="buyBarracks">
-      <cost resource="PUs" quantity="10"/>
+      <cost resource="PUs" quantity="8"/>
       <result resourceOrUnit="barracks" quantity="1"/>
     </productionRule>
     <productionRule name="buyAirfield">
