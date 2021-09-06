@@ -1433,16 +1433,20 @@
       <cost resource="PUs" quantity="4"/>
       <result resourceOrUnit="artillery" quantity="1"/>
     </productionRule>
+    <productionRule name="buyAAGun">
+      <cost resource="PUs" quantity="4"/>
+      <result resourceOrUnit="aaGun" quantity="1"/>
+    </productionRule>
     <productionRule name="buyArmour">
       <cost resource="PUs" quantity="6"/>
       <result resourceOrUnit="armour" quantity="1"/>
     </productionRule>
     <productionRule name="buyFighter">
-      <cost resource="PUs" quantity="10"/>
+      <cost resource="PUs" quantity="8"/>
       <result resourceOrUnit="fighter" quantity="1"/>
     </productionRule>
     <productionRule name="buyTactical_Bomber">
-      <cost resource="PUs" quantity="11"/>
+      <cost resource="PUs" quantity="10"/>
       <result resourceOrUnit="tactical_bomber" quantity="1"/>
     </productionRule>
     <productionRule name="buyBomber">
@@ -1450,40 +1454,28 @@
       <result resourceOrUnit="bomber" quantity="1"/>
     </productionRule>
     <productionRule name="buyTransport">
-      <cost resource="PUs" quantity="7"/>
+      <cost resource="PUs" quantity="10"/>
       <result resourceOrUnit="transport" quantity="1"/>
     </productionRule>
     <productionRule name="buyCarrier">
-      <cost resource="PUs" quantity="16"/>
+      <cost resource="PUs" quantity="15"/>
       <result resourceOrUnit="carrier" quantity="1"/>
     </productionRule>
     <productionRule name="buyDestroyer">
-      <cost resource="PUs" quantity="8"/>
+      <cost resource="PUs" quantity="6"/>
       <result resourceOrUnit="destroyer" quantity="1"/>
     </productionRule>
     <productionRule name="buyCruiser">
-      <cost resource="PUs" quantity="12"/>
+      <cost resource="PUs" quantity="9"/>
       <result resourceOrUnit="cruiser" quantity="1"/>
     </productionRule>
     <productionRule name="buyBattleship">
-      <cost resource="PUs" quantity="20"/>
+      <cost resource="PUs" quantity="16"/>
       <result resourceOrUnit="battleship" quantity="1"/>
     </productionRule>
     <productionRule name="buySubmarine">
-      <cost resource="PUs" quantity="6"/>
+      <cost resource="PUs" quantity="5"/>
       <result resourceOrUnit="submarine" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyFactory_Minor">
-      <cost resource="PUs" quantity="12"/>
-      <result resourceOrUnit="factory_minor" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyFactory_Major">
-      <cost resource="PUs" quantity="30"/>
-      <result resourceOrUnit="factory_major" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyFactory_Upgrade">
-      <cost resource="PUs" quantity="20"/>
-      <result resourceOrUnit="factory_upgrade" quantity="1"/>
     </productionRule>
     <productionRule name="buyAirfield">
       <cost resource="PUs" quantity="15"/>
@@ -1492,10 +1484,6 @@
     <productionRule name="buyHarbour">
       <cost resource="PUs" quantity="15"/>
       <result resourceOrUnit="harbour" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyAAGun">
-      <cost resource="PUs" quantity="5"/>
-      <result resourceOrUnit="aaGun" quantity="1"/>
     </productionRule>
     <!-- Advanced Industrial Production -->
     <!--<productionRule name="buyInfantryIndustrialTechnology">
@@ -1683,9 +1671,6 @@
       <frontierRules name="buyCruiser"/>
       <frontierRules name="buyBattleship"/>
       <frontierRules name="buyAAGun"/>
-      <frontierRules name="buyFactory_Minor"/>
-      <frontierRules name="buyFactory_Upgrade"/>
-      <frontierRules name="buyFactory_Major"/>
       <frontierRules name="buyAirfield"/>
       <frontierRules name="buyHarbour"/>
     </productionFrontier>
