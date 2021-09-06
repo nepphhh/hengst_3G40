@@ -2342,7 +2342,7 @@
       <!--<option name="canBeGivenByTerritoryTo" value="British"/>-->
       <option name="isRocket" value="true"/>
       <option name="bombingMaxDieSides" value="6"/>
-      <option name="bombingBonus" value="0"/>
+      <option name="bombingBonus" value="-1"/>
     </attachment>
     <!-- Harbour -->
     <attachment name="unitAttachment" attachTo="harbour" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
