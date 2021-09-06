@@ -2335,9 +2335,9 @@
       <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="1"/>
       <option name="movement" value="0"/>
-      <option name="givesMovement" value="1:fighter"/>
-      <option name="givesMovement" value="1:bomber"/>
-      <option name="givesMovement" value="1:tactical_bomber"/>
+      <option name="givesMovement" value="2:fighter"/>
+      <option name="givesMovement" value="2:bomber"/>
+      <option name="givesMovement" value="2:tactical_bomber"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
       <!--<option name="canBeGivenByTerritoryTo" value="British"/>-->
       <option name="isRocket" value="true"/>
@@ -2359,7 +2359,7 @@
       <option name="givesMovement" value="1:transport"/>
       <option name="givesMovement" value="1:submarine"/>
       <option name="givesMovement" value="1:destroyer"/>
-      <option name="givesMovement" value="1:cruiser"/>
+      <option name="givesMovement" value="0:cruiser"/>
       <option name="givesMovement" value="1:carrier"/>
       <option name="givesMovement" value="1:battleship"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
