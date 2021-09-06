@@ -1,3 +1,3 @@
-map_name: young_grasshoppers_tournament_edition
+map_name: hengst_3g40
 games:
-- {game_name: Young Grasshoppers Tournament Edition, file_name: young_grasshoppers_tournament_edition.xml}
+- {game_name: Hengst 3G40 Homebrew, file_name: hengst_3g40.xml}
