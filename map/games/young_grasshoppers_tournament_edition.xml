@@ -2151,7 +2151,7 @@
     <!-- Mech Infantry -->
     <attachment name="unitAttachment" attachTo="mech_infantry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="2"/>
-      <option name="transportCost" value="3"/>
+      <option name="transportCost" value="2"/>
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
       <!--<option name="artillerySupportable" value="true"/>-->
@@ -2193,13 +2193,13 @@
     <attachment name="unitAttachment" attachTo="bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="6"/>
       <option name="isAir" value="true"/>
-      <option name="attack" value="4"/>
+      <option name="attack" value="0"/>
       <option name="defense" value="1"/>
       <option name="isStrategicBomber" value="true"/>
       <option name="isAirTransport" value="true"/>
       <option name="transportCapacity" value="2"/>
       <option name="bombingMaxDieSides" value="6"/>
-      <option name="bombingBonus" value="2"/>
+      <option name="bombingBonus" value="0"/>
       <option name="airAttack" value="1"/>
     </attachment>
     <!-- Tactical Bomber -->
@@ -2208,7 +2208,7 @@
       <option name="carrierCost" value="1"/>
       <option name="isAir" value="true"/>
       <option name="attack" value="3"/>
-      <option name="defense" value="3"/>
+      <option name="defense" value="2"/>
       <option name="isStrategicBomber" value="true"/>
       <option name="canScramble" value="true"/>
       <option name="maxScrambleDistance" value="1"/>
@@ -2222,7 +2222,7 @@
     <attachment name="unitAttachment" attachTo="transport" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="2"/>
       <option name="isSea" value="true"/>
-      <option name="transportCapacity" value="5"/>
+      <option name="transportCapacity" value="6"/>
       <option name="attack" value="0"/>
       <option name="defense" value="0"/>
     </attachment>
@@ -2238,10 +2238,10 @@
     </attachment>
     <!-- Cruiser -->
     <attachment name="unitAttachment" attachTo="cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="movement" value="2"/>
+      <option name="movement" value="3"/>
       <option name="isSea" value="true"/>
       <option name="attack" value="3"/>
-      <option name="defense" value="3"/>
+      <option name="defense" value="2"/>
       <option name="canBombard" value="true"/>
       <option name="hitPoints" value="1"/>
       <option name="blockade" value="1"/>
@@ -2250,7 +2250,7 @@
     <attachment name="unitAttachment" attachTo="destroyer" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="2"/>
       <option name="isSea" value="true"/>
-      <option name="attack" value="2"/>
+      <option name="attack" value="1"/>
       <option name="defense" value="2"/>
       <option name="isDestroyer" value="true"/>
       <option name="blockade" value="1"/>
@@ -2273,7 +2273,7 @@
       <option name="movement" value="2"/>
       <option name="isSea" value="true"/>
       <option name="isSub" value="true"/>
-      <option name="attack" value="2"/>
+      <option name="attack" value="1"/>
       <option name="defense" value="1"/>
       <option name="blockade" value="2"/>
       <!-- stuff for targeting unescorted transports (we are using the new-fangled aa-gun code)
