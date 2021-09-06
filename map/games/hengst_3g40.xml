@@ -1460,15 +1460,15 @@
       <result resourceOrUnit="submarine" quantity="1"/>
     </productionRule>
     <productionRule name="buyBarracks">
-      <cost resource="PUs" quantity="10"/>
+      <cost resource="PUs" quantity="12"/>
       <result resourceOrUnit="barracks" quantity="1"/>
     </productionRule>
     <productionRule name="buyAirfield">
-      <cost resource="PUs" quantity="15"/>
+      <cost resource="PUs" quantity="12"/>
       <result resourceOrUnit="airfield" quantity="1"/>
     </productionRule>
     <productionRule name="buyHarbour">
-      <cost resource="PUs" quantity="15"/>
+      <cost resource="PUs" quantity="12"/>
       <result resourceOrUnit="harbour" quantity="1"/>
     </productionRule>
     <!-- Repair rules -->
@@ -1616,7 +1616,6 @@
       <option name="isInfantry" value="true"/>
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
-      <!--<option name="artillerySupportable" value="true"/>-->
       <option name="isAirTransportable" value="true"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:UK_Pacific:Chinese"/>
     </attachment>
@@ -1626,9 +1625,7 @@
       <option name="transportCost" value="2"/>
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
-      <!--<option name="artillerySupportable" value="true"/>-->
       <option name="receivesAbilityWhenWith" value="canBlitz:armour"/>
-      <option name="requiresUnits" value="factory_minor:factory_major"/>
     </attachment>
     <!-- Artillery -->
     <attachment name="unitAttachment" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1636,8 +1633,6 @@
       <option name="transportCost" value="3"/>
       <option name="attack" value="2"/>
       <option name="defense" value="2"/>  
-      <option name="requiresUnits" value="factory_minor:factory_major"/>
-      <!--<option name="artillery" value="true"/>-->
     </attachment>
     <!-- Armour -->
     <attachment name="unitAttachment" attachTo="armour" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
