@@ -1275,7 +1275,6 @@
   </unitList>
   <relationshipTypes>
     <relationshipType name="Allied"/>
-    <relationshipType name="Loosely_Allied"/>
     <relationshipType name="War"/>
     <relationshipType name="Unprovoked"/>
     <relationshipType name="Neutrality"/>
@@ -1611,20 +1610,13 @@
     <attachment name="relationshipTypeAttachment" attachTo="Allied" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
       <option name="archeType" value="allied"/>
     </attachment>
-    <attachment name="relationshipTypeAttachment" attachTo="Loosely_Allied" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
+    <attachment name="relationshipTypeAttachment" attachTo="Concordant" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
       <option name="archeType" value="allied"/>
       <option name="canMoveLandUnitsOverOwnedLand" value="false"/>
-      <option name="canMoveAirUnitsOverOwnedLand" value="false"/>
       <option name="canLandAirUnitsOnOwnedLand" value="false"/>
     </attachment>
     <attachment name="relationshipTypeAttachment" attachTo="Neutrality" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
       <option name="archeType" value="neutral"/>
-    </attachment>
-    <attachment name="relationshipTypeAttachment" attachTo="Concordant" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
-      <option name="archeType" value="neutral"/>
-      <option name="canMoveLandUnitsOverOwnedLand" value="false"/>
-      <option name="canMoveAirUnitsOverOwnedLand" value="false"/>
-      <option name="canLandAirUnitsOnOwnedLand" value="false"/>
     </attachment>
     <attachment name="relationshipTypeAttachment" attachTo="Friendly" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
       <option name="archeType" value="allied"/>
@@ -4021,42 +4013,42 @@
     <attachment name="triggerAttachment_Russians_Allied_Americans_1" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="conditionAttachmentRussians_Neutrality_Americans_but_War_With_European_Axis:conditionAttachmentRussians_Neutrality_Americans_but_War_With_Japanese"/>
       <option name="conditionType" value="OR"/>
-      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Concordant"/>
       <option name="when" value="after:germansPolitics"/>
       <option name="uses" value="1"/>
     </attachment>
     <attachment name="triggerAttachment_Russians_Allied_Americans_2" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="conditionAttachmentRussians_Neutrality_Americans_but_War_With_European_Axis:conditionAttachmentRussians_Neutrality_Americans_but_War_With_Japanese"/>
       <option name="conditionType" value="OR"/>
-      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Concordant"/>
       <option name="when" value="after:russiansPurchase"/>
       <option name="uses" value="1"/>
     </attachment>
     <attachment name="triggerAttachment_Russians_Allied_Americans_3" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="conditionAttachmentRussians_Neutrality_Americans_but_War_With_European_Axis:conditionAttachmentRussians_Neutrality_Americans_but_War_With_Japanese"/>
       <option name="conditionType" value="OR"/>
-      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Concordant"/>
       <option name="when" value="after:italiansPolitics"/>
       <option name="uses" value="1"/>
     </attachment>
     <attachment name="triggerAttachment_Russians_Allied_Americans_4" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="conditionAttachmentRussians_Neutrality_Americans_but_War_With_European_Axis:conditionAttachmentRussians_Neutrality_Americans_but_War_With_Japanese"/>
       <option name="conditionType" value="OR"/>
-      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Concordant"/>
       <option name="when" value="after:americansEndTurn"/>
       <option name="uses" value="1"/>
     </attachment>
     <attachment name="triggerAttachment_Russians_Allied_Americans_5" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="conditionAttachmentRussians_Neutrality_Americans_but_War_With_European_Axis:conditionAttachmentRussians_Neutrality_Americans_but_War_With_Japanese"/>
       <option name="conditionType" value="OR"/>
-      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Concordant"/>
       <option name="when" value="after:japanesePolitics"/>
       <option name="uses" value="1"/>
     </attachment>
     <attachment name="triggerAttachment_Russians_Allied_Americans_6" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="conditionAttachmentRussians_Neutrality_Americans_but_War_With_European_Axis:conditionAttachmentRussians_Neutrality_Americans_but_War_With_Japanese"/>
       <option name="conditionType" value="OR"/>
-      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:Americans:anyNeutral:Concordant"/>
       <option name="when" value="after:americansPolitics"/>
       <option name="uses" value="1"/>
     </attachment>
@@ -4838,17 +4830,17 @@
     <attachment name="politicalActionAttachment_Japanese_To_War_With_Russians" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
       <option name="conditions" value="conditionAttachmentPacificAxisNotYetAtWarWithRussians"/>
       <option name="relationshipChange" value="Japanese:Russians:War"/>
-      <option name="relationshipChange" value="Russians:Chinese:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:Chinese:Concordant"/>
       <option name="relationshipChange" value="Russians:Dutch:Friendly"/>
-      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Concordant"/>
       <option name="text" value="Japanese_War_Russians"/>
     </attachment>
     <attachment name="politicalActionAttachment_Russians_To_War_With_Japanese" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
       <option name="conditions" value="conditionAttachmentPacificAxisNotYetAtWarWithRussians"/>
       <option name="relationshipChange" value="Japanese:Russians:War"/>
-      <option name="relationshipChange" value="Russians:Chinese:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:Chinese:Concordant"/>
       <option name="relationshipChange" value="Russians:Dutch:Friendly"/>
-      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Concordant"/>
       <option name="text" value="Russians_War_Japanese"/>
     </attachment>
     <attachment name="politicalActionAttachment_Chinese_To_War_With_Germans" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4886,9 +4878,9 @@
     <attachment name="politicalActionAttachment_Axis_To_War_With_Russians" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
       <option name="conditions" value="conditionAttachment_Germans_Not_At_War_With_Russians"/>
       <option name="relationshipChange" value="Germans:Russians:War"/>
-      <option name="relationshipChange" value="Russians:British:Loosely_Allied"/>
-      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Loosely_Allied"/>
-      <option name="relationshipChange" value="Russians:French:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:British:Concordant"/>
+      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Concordant"/>
+      <option name="relationshipChange" value="Russians:French:Concordant"/>
       <option name="relationshipChange" value="Russians:Neutral_Allies:Friendly_Neutral"/>
       <option name="relationshipChange" value="Russians:Neutral_Axis:Unfriendly_Neutral"/>
       <option name="text" value="Axis_War_Russians"/>
@@ -4896,9 +4888,9 @@
     <attachment name="politicalActionAttachment_Axis_To_War_With_Russians" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
       <option name="conditions" value="conditionAttachment_Italians_Not_At_War_With_Russians"/>
       <option name="relationshipChange" value="Italians:Russians:War"/>
-      <option name="relationshipChange" value="Russians:British:Loosely_Allied"/>
-      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Loosely_Allied"/>
-      <option name="relationshipChange" value="Russians:French:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:British:Concordant"/>
+      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Concordant"/>
+      <option name="relationshipChange" value="Russians:French:Concordant"/>
       <option name="relationshipChange" value="Russians:Neutral_Allies:Friendly_Neutral"/>
       <option name="relationshipChange" value="Russians:Neutral_Axis:Unfriendly_Neutral"/>
       <option name="text" value="Axis_War_Russians"/>
@@ -4906,9 +4898,9 @@
     <attachment name="politicalActionAttachment_Russians_To_War_With_Germans" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
       <option name="conditions" value="conditionAttachment_Germans_Not_At_War_With_Russians:conditionAttachment_Russians_May_Declare_War_On_European_Axis"/>
       <option name="relationshipChange" value="Germans:Russians:War"/>
-      <option name="relationshipChange" value="Russians:British:Loosely_Allied"/>
-      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Loosely_Allied"/>
-      <option name="relationshipChange" value="Russians:French:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:British:Concordant"/>
+      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Concordant"/>
+      <option name="relationshipChange" value="Russians:French:Concordant"/>
       <option name="relationshipChange" value="Russians:Neutral_Allies:Friendly_Neutral"/>
       <option name="relationshipChange" value="Russians:Neutral_Axis:Unfriendly_Neutral"/>
       <option name="text" value="Russians_War_Germans"/>
@@ -4916,9 +4908,9 @@
     <attachment name="politicalActionAttachment_Russians_To_War_With_Italians" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
       <option name="conditions" value="conditionAttachment_Italians_Not_At_War_With_Russians:conditionAttachment_Russians_May_Declare_War_On_European_Axis"/>
       <option name="relationshipChange" value="Italians:Russians:War"/>
-      <option name="relationshipChange" value="Russians:British:Loosely_Allied"/>
-      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Loosely_Allied"/>
-      <option name="relationshipChange" value="Russians:French:Loosely_Allied"/>
+      <option name="relationshipChange" value="Russians:British:Concordant"/>
+      <option name="relationshipChange" value="Russians:Pacific_Commonwealth:Concordant"/>
+      <option name="relationshipChange" value="Russians:French:Concordant"/>
       <option name="relationshipChange" value="Russians:Neutral_Allies:Friendly_Neutral"/>
       <option name="relationshipChange" value="Russians:Neutral_Axis:Unfriendly_Neutral"/>
       <option name="text" value="Russians_War_Italians"/>
@@ -5656,7 +5648,7 @@
     </resourceInitialize>
     <relationshipInitialize>
       <relationship player1="Germans" player2="Russians" type="Neutrality" roundValue="1"/>
-      <relationship player1="Germans" player2="Japanese" type="Loosely_Allied" roundValue="1"/>
+      <relationship player1="Germans" player2="Japanese" type="Concordant" roundValue="1"/>
       <relationship player1="Germans" player2="Americans" type="Neutrality" roundValue="1"/>
       <relationship player1="Germans" player2="Chinese" type="Neutrality" roundValue="1"/>
       <relationship player1="Germans" player2="British" type="War" roundValue="1"/>
