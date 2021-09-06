@@ -1540,8 +1540,6 @@
     <playerProduction player="Japanese" frontier="production"/>
     <playerProduction player="Russians" frontier="production"/>
     <playerRepair player="Americans" frontier="repair"/>
-    <!-- Chinese are not allowed to repair
-				<playerRepair player="Chinese" frontier="repair"/> -->
     <playerRepair player="British" frontier="repair"/>
     <playerRepair player="Pacific_Commonwealth" frontier="repair"/>
     <playerRepair player="French" frontier="repair"/>
@@ -1549,8 +1547,60 @@
     <playerRepair player="Italians" frontier="repair"/>
     <playerRepair player="Russians" frontier="repair"/>
     <playerRepair player="Japanese" frontier="repair"/>
-  </production>
+  </production>  
+  <technology>
+    <technologies>
+      <techname name="warBonds"/>
+    </technologies>
+  </technology>
   <attachmentList>
+    <attachment name="techAbilityAttachment" attachTo="warBonds" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+      <option name="warBondDiceSides" value="6"/>
+      <option name="warBondDiceNumber" value="1"/>
+    </attachment>
+    <!-- Players Tech -->
+    <attachment name="techAttachment" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="true"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="true"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="true"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="British" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="true"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="Pacific_Commonwealth" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="true"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="Italians" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="true"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="true"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="French" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="true"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="false"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="Dutch" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="false"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="Mongolians" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="false"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="Neutral_Axis" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="false"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="Neutral_Allies" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="false"/>
+    </attachment>
+    <attachment name="techAttachment" attachTo="Neutral_True" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+      <option name="warBonds" value="false"/>
+    </attachment>
     <!--  relationshipType Attachments -->
     <attachment name="relationshipTypeAttachment" attachTo="War" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
       <option name="archeType" value="war"/>
