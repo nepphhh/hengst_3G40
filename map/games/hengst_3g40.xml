@@ -1642,7 +1642,8 @@
       <option name="attack" value="3"/>
       <option name="defense" value="3"/>
       <option name="isLandTransport" value="true"/>
-      <option name="requiresUnits" value="factory_minor:factory_major"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
     </attachment>
     <!-- Fighter -->
     <attachment name="unitAttachment" attachTo="fighter" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1658,7 +1659,8 @@
       <option name="airDefense" value="1"/>
       <option name="airAttack" value="1"/>
       <option name="blockade" value="2"/>
-      <option name="requiresUnits" value="factory_minor:factory_major"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
     </attachment>
     <!-- Bomber -->
     <attachment name="unitAttachment" attachTo="bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1672,7 +1674,8 @@
       <option name="bombingMaxDieSides" value="6"/>
       <option name="bombingBonus" value="0"/>
       <option name="airAttack" value="1"/>
-      <option name="requiresUnits" value="factory_minor:factory_major"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
     </attachment>
     <!-- Tactical Bomber -->
     <attachment name="unitAttachment" attachTo="tactical_bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1689,7 +1692,8 @@
       <option name="bombingMaxDieSides" value="6"/>
       <option name="bombingBonus" value="0"/>
       <option name="bombingTargets" value="airfield:harbour"/>
-      <option name="requiresUnits" value="factory_minor:factory_major"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
     </attachment>
     <!-- Transport -->
     <attachment name="unitAttachment" attachTo="transport" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1708,7 +1712,7 @@
       <option name="canBombard" value="true"/>
       <option name="hitPoints" value="2"/>
       <option name="blockade" value="1"/>
-      <option name="requiresUnits" value="factory_major"/>
+      <option name="requiresUnits" value="factory_major:harbour"/>
     </attachment>
     <!-- Cruiser -->
     <attachment name="unitAttachment" attachTo="cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1719,7 +1723,8 @@
       <option name="canBombard" value="true"/>
       <option name="hitPoints" value="1"/>
       <option name="blockade" value="1"/>
-      <option name="requiresUnits" value="factory_minor:factory_major"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
     </attachment>
     <!-- Destroyer -->
     <attachment name="unitAttachment" attachTo="destroyer" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1729,7 +1734,8 @@
       <option name="defense" value="2"/>
       <option name="isDestroyer" value="true"/>
       <option name="blockade" value="1"/>
-      <option name="requiresUnits" value="factory_minor:factory_major"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
     </attachment>
     <!-- Carrier -->
     <attachment name="unitAttachment" attachTo="carrier" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1743,7 +1749,7 @@
       <!-- whenCombatDamaged means that when this unit has x:y damage on it, it will have this effect -->
       <option name="whenCombatDamaged" value="unitsMayNotLandOnCarrier" count="1:2"/>
       <option name="whenCombatDamaged" value="unitsMayNotLeaveAlliedCarrier" count="1:2"/>
-      <option name="requiresUnits" value="factory_major"/>
+      <option name="requiresUnits" value="factory_major:harbour"/>
     </attachment>
     <!-- Submarine -->
     <attachment name="unitAttachment" attachTo="submarine" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1763,7 +1769,8 @@
 						 <option name="attackAAmaxDieSides" value="6"/>
 						 <option name="typeAA" value="Submarine Strike on Unescorted Transports"/>-->
       <!-- TODO: submarines now prevent amphibious assaults unless there is an owned warship present -->
-      <option name="requiresUnits" value="factory_minor:factory_major"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
     </attachment>\
     <!-- Barracks -->
     <attachment name="unitAttachment" attachTo="barracks" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
