@@ -1254,6 +1254,7 @@
   <unitList>
     <unit name="infantry"/>
     <unit name="artillery"/>
+    <unit name="artillery_china"/>
     <unit name="mech_infantry"/>
     <unit name="armour"/>
     <unit name="fighter"/>
@@ -1415,6 +1416,10 @@
       <cost resource="PUs" quantity="4"/>
       <result resourceOrUnit="artillery" quantity="1"/>
     </productionRule>
+    <productionRule name="buyArtilleryChina">
+      <cost resource="PUs" quantity="4"/>
+      <result resourceOrUnit="artillery_china" quantity="1"/>
+    </productionRule>
     <productionRule name="buyAAGun">
       <cost resource="PUs" quantity="4"/>
       <result resourceOrUnit="aaGun" quantity="1"/>
@@ -1460,7 +1465,7 @@
       <result resourceOrUnit="submarine" quantity="1"/>
     </productionRule>
     <productionRule name="buyBarracks">
-      <cost resource="PUs" quantity="12"/>
+      <cost resource="PUs" quantity="10"/>
       <result resourceOrUnit="barracks" quantity="1"/>
     </productionRule>
     <productionRule name="buyAirfield">
@@ -1520,7 +1525,7 @@
     </productionFrontier>
     <productionFrontier name="productionChinese_Burma_Road_Open">
       <frontierRules name="buyInfantry"/>
-      <frontierRules name="buyArtillery"/>
+      <frontierRules name="buyArtilleryChina"/>
     </productionFrontier>
     <productionFrontier name="productionChinese_Burma_Road_Closed">
       <frontierRules name="buyInfantry"/>
@@ -1610,9 +1615,19 @@
       <option name="canBlitz" value="true"/>
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
     </attachment>
     <!-- Artillery -->
     <attachment name="unitAttachment" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+      <option name="movement" value="1"/>
+      <option name="transportCost" value="3"/>
+      <option name="attack" value="2"/>
+      <option name="defense" value="2"/>  
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
+    </attachment>
+    <attachment name="unitAttachment" attachTo="artillery_china" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="1"/>
       <option name="transportCost" value="3"/>
       <option name="attack" value="2"/>
@@ -1686,6 +1701,8 @@
       <option name="transportCapacity" value="6"/>
       <option name="attack" value="0"/>
       <option name="defense" value="0"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
     </attachment>
     <!-- Battle Ship -->
     <attachment name="unitAttachment" attachTo="battleship" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1753,7 +1770,7 @@
       <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
       <option name="destroyedWhenCapturedBy" value="Germans:Pacific_Commonwealth:Japanese:British:Italians:Chinese:Russians:Americans:French"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
-      <option name="canProduceXUnits" value="3"/>
+      <option name="canProduceXUnits" value="2"/>
       <option name="maxDamage" value="6"/>
     </attachment>
     <!-- Factory Minor -->
@@ -2719,6 +2736,17 @@
       <option name="impArtTech" value="true"/>
       <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese:Pacific_Commonwealth:French:Dutch"/>
     </attachment>
+    <attachment name="supportAttachmentInfantryAndMechInf" attachTo="artillery_china" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
+      <option name="unitType" value="infantry:mech_infantry"/>
+      <option name="faction" value="allied"/>
+      <option name="side" value="offence"/>
+      <option name="dice" value="strength"/>
+      <option name="bonus" value="1"/>
+      <option name="number" value="1"/>
+      <option name="bonusType" value="infantry_bonus"/>
+      <option name="impArtTech" value="true"/>
+      <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese:Pacific_Commonwealth:French:Dutch"/>
+    </attachment>
     <attachment name="supportAttachmentTacticalBomber1" attachTo="fighter" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
       <option name="unitType" value="tactical_bomber"/>
       <option name="faction" value="allied"/>
@@ -2815,7 +2843,7 @@
     <attachment name="objectiveAttachment_British_European_Theater" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="5"/>
       <option name="directPresenceTerritories" value="Normandy Bordeaux:France:Southern France" count="1"/>
-      <option name="unitPresence" value="aaGun:infantry:artillery:mech_infantry:armour" count="1"/>	  
+      <option name="unitPresence" value="aaGun:infantry:artillery:artillery_china:mech_infantry:armour" count="1"/>	  
     </attachment>
     <attachment name="objectiveAttachment_British_Colonies" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="5"/>
@@ -2845,7 +2873,7 @@
     <attachment name="objectiveAttachment_Pacific_Commonwealth_Outer_Perimeter" attachTo="Pacific_Commonwealth" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="5"/>
       <option name="directPresenceTerritories" value="Sumatra:Java:Borneo:Celebes:Dutch New Guinea:Suriname" count="1"/>
-      <option name="unitPresence" value="aaGun:infantry:artillery:mech_infantry:armour" count="1"/>
+      <option name="unitPresence" value="aaGun:infantry:artillery:artillery_china:mech_infantry:armour" count="1"/>
       <option name="atWarPlayers" value="Japanese" count="1"/>	    
     </attachment>
 	
@@ -2913,7 +2941,7 @@
     <attachment name="conditionAttachment_Germans_4_unit_presence" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="directPresenceTerritories" value="Egypt" count="1"/>
       <!-- any land unit includes aaGuns but does not include 'facilities' -->
-      <option name="unitPresence" value="infantry:artillery:mech_infantry:armour:aaGun" count="1"/>
+      <option name="unitPresence" value="infantry:artillery:artillery_china:mech_infantry:armour:aaGun" count="1"/>
     </attachment>
     <attachment name="conditionAttachment_Germans_5_Control_Norway_And_Denmark" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="directOwnershipTerritories" value="Denmark:Norway" count="2"/>
@@ -2997,7 +3025,7 @@
       <option name="directPresenceTerritories" value="France" count="1"/>
       <option name="atWarPlayers" value="Japanese:Germans:Italians" count="1"/>
       <!-- any land unit includes aaGuns but does not include 'facilities' -->
-      <option name="unitPresence" value="infantry:artillery:mech_infantry:armour:aaGun" count="1"/>
+      <option name="unitPresence" value="infantry:artillery:artillery_china:mech_infantry:armour:aaGun" count="1"/>
     </attachment>
     <!-- French Conditions -->
     <attachment name="conditionAttachment_French_1_Lose_France" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
