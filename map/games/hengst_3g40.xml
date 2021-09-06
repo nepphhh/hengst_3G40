@@ -1468,11 +1468,11 @@
       <result resourceOrUnit="barracks" quantity="1"/>
     </productionRule>
     <productionRule name="buyAirfield">
-      <cost resource="PUs" quantity="12"/>
+      <cost resource="PUs" quantity="8"/>
       <result resourceOrUnit="airfield" quantity="1"/>
     </productionRule>
     <productionRule name="buyHarbour">
-      <cost resource="PUs" quantity="12"/>
+      <cost resource="PUs" quantity="8"/>
       <result resourceOrUnit="harbour" quantity="1"/>
     </productionRule>
     <!-- Repair rules -->
@@ -1854,6 +1854,7 @@
       <option name="isRocket" value="true"/>
       <option name="bombingMaxDieSides" value="6"/>
       <option name="bombingBonus" value="-1"/>
+      <option name="destroyedWhenCapturedBy" value="Germans:Pacific_Commonwealth:Japanese:British:Italians:Chinese:Russians:Americans:French"/>
     </attachment>
     <!-- Harbour -->
     <attachment name="unitAttachment" attachTo="harbour" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1874,6 +1875,7 @@
       <option name="givesMovement" value="1:carrier"/>
       <option name="givesMovement" value="1:battleship"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="destroyedWhenCapturedBy" value="Germans:Pacific_Commonwealth:Japanese:British:Italians:Chinese:Russians:Americans:French"/>
     </attachment>
     <!-- AA Gun -->
     <attachment name="unitAttachment" attachTo="aaGun" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1884,7 +1886,7 @@
 						 <option name="canBeDamaged" value="false"/>-->
       <option name="movement" value="1"/>
       <option name="transportCost" value="3"/>
-      <option name="maxAAattacks" value="3"/>
+      <option name="maxAAattacks" value="2"/>
       <option name="requiresUnits" value="factory_minor:factory_major"/>
     </attachment>
     <!-- Territory Attachments -->
