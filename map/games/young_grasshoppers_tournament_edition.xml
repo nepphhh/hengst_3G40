@@ -6171,6 +6171,7 @@
       <unitPlacement unitType="fighter" territory="Szechwan" quantity="1" owner="Chinese"/>
       <unitPlacement unitType="infantry" territory="Hunan" quantity="2" owner="Chinese"/>
       <unitPlacement unitType="infantry" territory="Yunnan" quantity="4" owner="Chinese"/>
+      <unitPlacement unitType="armour" territory="Yunnan" quantity="4" owner="Chinese"/>
       <unitPlacement unitType="infantry" territory="Kweichow" quantity="2" owner="Chinese"/>
       <unitPlacement unitType="infantry" territory="Shensi" quantity="1" owner="Chinese"/>
       <unitPlacement unitType="infantry" territory="Suiyuyan" quantity="2" owner="Chinese"/>
