@@ -1643,8 +1643,7 @@
     <!-- Infantry -->
     <attachment name="unitAttachment" attachTo="infantry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="1"/>
-      <option name="transportCost" value="2"/>
-      <option name="isInfantry" value="true"/>
+      <option name="transportCost" value="3"/>
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
       <option name="isAirTransportable" value="true"/>
@@ -1653,7 +1652,7 @@
     <!-- Mech Infantry -->
     <attachment name="unitAttachment" attachTo="mech_infantry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="2"/>
-      <option name="transportCost" value="2"/>
+      <option name="transportCost" value="3"/>      
       <option name="canBlitz" value="true"/>
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
@@ -1663,7 +1662,7 @@
     <!-- Artillery -->
     <attachment name="unitAttachment" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="1"/>
-      <option name="transportCost" value="3"/>
+      <option name="transportCost" value="4"/>
       <option name="attack" value="2"/>
       <option name="defense" value="2"/>  
       <option name="requiresUnits" value="factory_minor"/>
@@ -1671,17 +1670,34 @@
     </attachment>
     <attachment name="unitAttachment" attachTo="artillery_china" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="1"/>
-      <option name="transportCost" value="3"/>
+      <option name="transportCost" value="4"/>
       <option name="attack" value="2"/>
       <option name="defense" value="2"/>  
+    </attachment>
+    <!-- AA Gun -->
+    <attachment name="unitAttachment" attachTo="aaGun" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+      <option name="movement" value="1"/>
+      <option name="transportCost" value="4"/>
+      <option name="attack" value="0"/>
+      <option name="defense" value="1"/>  
+      <option name="isAAforCombatOnly" value="true"/>
+      <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="maxRoundsAA" value="-1"/>
+      <option name="attackAA" value="1"/>
+      <option name="offensiveAttackAA" value="1"/>
+      <option name="maxAAattacks" value="2"/>
+      <option name="mayOverStackAA" value="true"/>
+      <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
+      <option name="requiresUnits" value="factory_minor:factory_major"/>
     </attachment>
     <!-- Armour -->
     <attachment name="unitAttachment" attachTo="armour" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="2"/>
-      <option name="transportCost" value="3"/>
+      <option name="transportCost" value="4"/>
       <option name="canBlitz" value="true"/>
       <option name="attack" value="3"/>
       <option name="defense" value="3"/>
+      <option name="isMarine" value="-1"/>
       <option name="isLandTransport" value="true"/>
       <option name="requiresUnits" value="factory_minor"/>
       <option name="requiresUnits" value="factory_major"/>
@@ -1698,8 +1714,34 @@
       <option name="canIntercept" value="true"/>
       <option name="canEscort" value="true"/>
       <option name="airDefense" value="1"/>
-      <option name="airAttack" value="1"/>
       <option name="blockade" value="2"/>
+      <option name="isAAforCombatOnly" value="true"/>
+      <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="maxRoundsAA" value="-1"/>
+      <option name="attackAA" value="4"/>
+      <option name="offensiveAttackAA" value="3"/>
+      <option name="maxAAattacks" value="1"/>
+      <option name="mayOverStackAA" value="true"/>
+      <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
+    </attachment>  
+    <!-- Tactical Bomber -->
+    <attachment name="unitAttachment" attachTo="tactical_bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+      <option name="movement" value="4"/>
+      <option name="carrierCost" value="1"/>
+      <option name="isAir" value="true"/>
+      <option name="attack" value="4"/>
+      <option name="defense" value="3"/>
+      <option name="blockade" value="2"/>
+      <option name="isAAforCombatOnly" value="true"/>
+      <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="maxRoundsAA" value="-1"/>
+      <option name="attackAA" value="1"/>
+      <option name="offensiveAttackAA" value="1"/>
+      <option name="maxAAattacks" value="1"/>
+      <option name="mayOverStackAA" value="true"/>
+      <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
       <option name="requiresUnits" value="factory_minor"/>
       <option name="requiresUnits" value="factory_major"/>
     </attachment>
@@ -1707,34 +1749,23 @@
     <attachment name="unitAttachment" attachTo="bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="6"/>
       <option name="isAir" value="true"/>
-      <option name="attack" value="0"/>
+      <option name="attack" value="3"/>
       <option name="defense" value="1"/>
       <option name="isStrategicBomber" value="true"/>
       <option name="isAirTransport" value="true"/>
       <option name="transportCapacity" value="2"/>
       <option name="bombingMaxDieSides" value="6"/>
       <option name="bombingBonus" value="0"/>
-      <option name="airAttack" value="1"/>
+      <option name="isAAforCombatOnly" value="true"/>
+      <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="maxRoundsAA" value="-1"/>
+      <option name="attackAA" value="1"/>
+      <option name="offensiveAttackAA" value="1"/>
+      <option name="maxAAattacks" value="1"/>
+      <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
       <option name="requiresUnits" value="factory_minor"/>
       <option name="requiresUnits" value="factory_major"/>
-    </attachment>
-    <!-- Tactical Bomber -->
-    <attachment name="unitAttachment" attachTo="tactical_bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="movement" value="4"/>
-      <option name="carrierCost" value="1"/>
-      <option name="isAir" value="true"/>
-      <option name="attack" value="3"/>
-      <option name="defense" value="2"/>
-      <option name="isStrategicBomber" value="true"/>
-      <option name="canScramble" value="true"/>
-      <option name="maxScrambleDistance" value="1"/>
-      <option name="airAttack" value="1"/>
-      <option name="blockade" value="2"/>
-      <option name="bombingMaxDieSides" value="6"/>
-      <option name="bombingBonus" value="0"/>
-      <option name="bombingTargets" value="airfield:harbour"/>
-      <option name="requiresUnits" value="factory_minor"/>
-      <option name="requiresUnits" value="factory_major"/>
+      <option name="canNotTarget" value="submarine:destroyer:cruiser:battleship:carrier:transport"/>
     </attachment>
     <!-- Transport -->
     <attachment name="unitAttachment" attachTo="transport" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1743,6 +1774,59 @@
       <option name="transportCapacity" value="6"/>
       <option name="attack" value="0"/>
       <option name="defense" value="0"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
+    </attachment>
+    <!-- Submarine -->
+    <attachment name="unitAttachment" attachTo="submarine" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+      <option name="movement" value="2"/>
+      <option name="isSea" value="true"/>
+      <option name="attack" value="2"/>
+      <option name="defense" value="1"/>
+      <option name="blockade" value="2"/>
+      <option name="canEvade" value="true"/>
+      <option name="isFirstStrike" value="true"/>
+      <option name="canMoveThroughEnemies" value="true"/>
+      <option name="canBeMovedThroughByEnemies" value="true"/>
+      <option name="canNotTarget" value="submarine:fighter:tactical_bomber:bomber"/>
+      <!-- <option name="isAAforCombatOnly" value="true"/>
+      <option name="maxRoundsAA" value="-1"/>
+      <option name="attackAA" value="1"/>
+      <option name="offensiveAttackAA" value="1"/>
+      <option name="maxAAattacks" value="1"/>
+      <option name="mayOverStackAA" value="true"/>
+      <option name="damageableAA" value="true"/>
+      <option name="targetsAA" value="destroyer:cruiser:carrier:battleship"/> -->
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
+    </attachment>
+    <!-- Destroyer -->
+    <attachment name="unitAttachment" attachTo="destroyer" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+      <option name="movement" value="2"/>
+      <option name="isSea" value="true"/>
+      <!-- <option name="isDestroyer" value="true"/> -->
+      <option name="attack" value="1"/>
+      <option name="defense" value="2"/>
+      <option name="blockade" value="1"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
+    </attachment>
+    <!-- Cruiser -->
+    <attachment name="unitAttachment" attachTo="cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+      <option name="movement" value="3"/>
+      <option name="isSea" value="true"/>
+      <option name="attack" value="3"/>
+      <option name="defense" value="2"/>
+      <option name="canBombard" value="true"/>
+      <option name="hitPoints" value="1"/>
+      <option name="blockade" value="1"/>
+      <option name="isAAforCombatOnly" value="true"/>
+      <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="maxRoundsAA" value="-1"/>
+      <option name="attackAA" value="1"/>
+      <option name="offensiveAttackAA" value="1"/>
+      <option name="maxAAattacks" value="1"/>
+      <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
       <option name="requiresUnits" value="factory_minor"/>
       <option name="requiresUnits" value="factory_major"/>
     </attachment>
@@ -1755,30 +1839,14 @@
       <option name="canBombard" value="true"/>
       <option name="hitPoints" value="2"/>
       <option name="blockade" value="1"/>
+      <option name="isAAforCombatOnly" value="true"/>
+      <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="maxRoundsAA" value="-1"/>
+      <option name="attackAA" value="1"/>
+      <option name="offensiveAttackAA" value="1"/>
+      <option name="maxAAattacks" value="1"/>
+      <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
       <option name="requiresUnits" value="factory_major:harbour"/>
-    </attachment>
-    <!-- Cruiser -->
-    <attachment name="unitAttachment" attachTo="cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="movement" value="3"/>
-      <option name="isSea" value="true"/>
-      <option name="attack" value="3"/>
-      <option name="defense" value="2"/>
-      <option name="canBombard" value="true"/>
-      <option name="hitPoints" value="1"/>
-      <option name="blockade" value="1"/>
-      <option name="requiresUnits" value="factory_minor"/>
-      <option name="requiresUnits" value="factory_major"/>
-    </attachment>
-    <!-- Destroyer -->
-    <attachment name="unitAttachment" attachTo="destroyer" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="movement" value="2"/>
-      <option name="isSea" value="true"/>
-      <option name="attack" value="1"/>
-      <option name="defense" value="2"/>
-      <option name="isDestroyer" value="true"/>
-      <option name="blockade" value="1"/>
-      <option name="requiresUnits" value="factory_minor"/>
-      <option name="requiresUnits" value="factory_major"/>
     </attachment>
     <!-- Carrier -->
     <attachment name="unitAttachment" attachTo="carrier" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1789,22 +1857,62 @@
       <option name="carrierCapacity" value="2"/>
       <option name="hitPoints" value="2"/>
       <option name="blockade" value="0"/>
+      <option name="unitProperty" value="isAirBase" count="true"/>
+      <option name="unitProperty" value="maxScrambleCount" count="1"/>
       <!-- whenCombatDamaged means that when this unit has x:y damage on it, it will have this effect -->
       <option name="whenCombatDamaged" value="unitsMayNotLandOnCarrier" count="1:2"/>
       <option name="whenCombatDamaged" value="unitsMayNotLeaveAlliedCarrier" count="1:2"/>
       <option name="requiresUnits" value="factory_major:harbour"/>
     </attachment>
-    <!-- Submarine -->
-    <attachment name="unitAttachment" attachTo="submarine" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="movement" value="2"/>
-      <option name="isSea" value="true"/>
-      <option name="isSub" value="true"/>
-      <option name="attack" value="1"/>
-      <option name="defense" value="1"/>
-      <option name="blockade" value="2"/>
-      <option name="requiresUnits" value="factory_minor"/>
-      <option name="requiresUnits" value="factory_major"/>
-    </attachment>\
+    <!-- Combined Arms -->     
+    <attachment name="supportAttachmentInfantryAndMechInf" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
+      <option name="unitType" value="infantry:mech_infantry"/>
+      <option name="faction" value="allied"/>
+      <option name="side" value="offence"/>
+      <option name="dice" value="strength"/>
+      <option name="bonus" value="1"/>
+      <option name="number" value="1"/>
+      <option name="bonusType" value="infantry_bonus"/>
+      <option name="impArtTech" value="true"/>
+      <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese"/>
+    </attachment>
+    <attachment name="supportAttachmentInfantryAndMechInf" attachTo="artillery_china" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
+      <option name="unitType" value="infantry:mech_infantry"/>
+      <option name="faction" value="allied"/>
+      <option name="side" value="offence"/>
+      <option name="dice" value="strength"/>
+      <option name="bonus" value="1"/>
+      <option name="number" value="1"/>
+      <option name="bonusType" value="infantry_bonus"/>
+      <option name="impArtTech" value="true"/>
+      <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese"/>
+    </attachment> 
+    <attachment name="supportAttachmentTacticalBomber1" attachTo="fighter" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
+      <option name="unitType" value="tactical_bomber"/>
+      <option name="faction" value="enemy"/>
+      <!-- This is when the fighter is on defence, so debuffs the *attacking* TacB -->
+      <option name="side" value="defence"/>
+      <option name="dice" value="strength"/>
+      <option name="bonus" value="-1"/>
+      <!-- Not quite infinity, but probably close enough -->
+      <option name="number" value="9999"/>
+      <option name="bonusType" value="combined_arms"/>
+      <option name="impArtTech" value="false"/>
+      <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese"/>
+    </attachment>
+    <attachment name="supportAttachmentTacticalBomber2" attachTo="fighter" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
+      <option name="unitType" value="tactical_bomber"/>
+      <option name="faction" value="enemy"/>
+      <!-- This is when the fighter is on offence, so debuffs the *defending* TacB -->
+      <option name="side" value="offence"/>
+      <option name="dice" value="strength"/>
+      <option name="bonus" value="-1"/>
+      <!-- Not quite infinity, but probably close enough -->
+      <option name="number" value="9999"/>
+      <option name="bonusType" value="combined_arms"/>
+      <option name="impArtTech" value="false"/>
+      <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese"/>
+    </attachment>
     <!-- Barracks -->
     <attachment name="unitAttachment" attachTo="barracks" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
@@ -1828,7 +1936,6 @@
       <option name="isFactory" value="true"/>
       <option name="unitPlacementRestrictions" value="Ceylon:Sumatra:Java:Borneo:Hainan:Philippines:Celebes:Dutch New Guinea:Paulau Island:New Guinea:New Britain:Solomon Islands:New Hebrides:New Zealand:Fiji:Samoa:Line Islands:Johnston Island:Hawaiian Islands:Midway:Iwo Jima:Aleutian Islands:Gilbert Islands:Marshall Islands:Caroline Islands:Wake Island:Marianas:Guam:Formosa:Okinawa:West Indies:Greenland:Iceland:Sardinia:Sicily:French Madagascar:Crete:Cyprus"/>
       <option name="canOnlyBePlacedInTerritoryValuedAtX" value="3"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="canProduceXUnits" value="10"/>
       <option name="maxDamage" value="20"/>
       <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
@@ -1841,7 +1948,7 @@
       <option name="maxDamage" value="6"/>
       <option name="maxOperationalDamage" value="2"/>
       <option name="isAirBase" value="true"/>
-      <option name="maxScrambleCount" value="3"/>
+      <option name="maxScrambleCount" value="2"/>
       <option name="isConstruction" value="true"/>
       <option name="constructionType" value="airfield_structure"/>
       <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
@@ -1850,10 +1957,6 @@
       <option name="givesMovement" value="2:fighter"/>
       <option name="givesMovement" value="2:bomber"/>
       <option name="givesMovement" value="2:tactical_bomber"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
-      <option name="isRocket" value="true"/>
-      <option name="bombingMaxDieSides" value="6"/>
-      <option name="bombingBonus" value="-1"/>
       <option name="destroyedWhenCapturedBy" value="Germans:Pacific_Commonwealth:Japanese:British:Italians:Chinese:Russians:Americans:French"/>
     </attachment>
     <!-- Harbour -->
@@ -1869,25 +1972,12 @@
       <option name="maxConstructionsPerTypePerTerr" value="1"/>
       <option name="movement" value="0"/>
       <option name="givesMovement" value="1:transport"/>
-      <option name="givesMovement" value="1:submarine"/>
+      <option name="givesMovement" value="0:submarine"/>
       <option name="givesMovement" value="1:destroyer"/>
       <option name="givesMovement" value="0:cruiser"/>
       <option name="givesMovement" value="1:carrier"/>
       <option name="givesMovement" value="1:battleship"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="destroyedWhenCapturedBy" value="Germans:Pacific_Commonwealth:Japanese:British:Italians:Chinese:Russians:Americans:French"/>
-    </attachment>
-    <!-- AA Gun -->
-    <attachment name="unitAttachment" attachTo="aaGun" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="isAAforCombatOnly" value="true"/>
-      <!--<option name="isRocket" value="true"/>-->
-      <option name="canNotMoveDuringCombatMove" value="true"/>
-      <!--<option name="isInfrastructure" value="true"/>
-						 <option name="canBeDamaged" value="false"/>-->
-      <option name="movement" value="1"/>
-      <option name="transportCost" value="3"/>
-      <option name="maxAAattacks" value="2"/>
-      <option name="requiresUnits" value="factory_minor:factory_major"/>
     </attachment>
     <!-- Territory Attachments -->
     <!-- P40 -->
@@ -2767,62 +2857,6 @@
     <attachment name="canalAttachmentTurkish" attachTo="99 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Turkish Straits"/>
       <option name="landTerritories" value="Turkey"/>
-    </attachment>
-    <!-- Support Attachments -->
-    <attachment name="supportAttachmentInfantryAndMechInf" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
-      <option name="unitType" value="infantry:mech_infantry"/>
-      <option name="faction" value="allied"/>
-      <option name="side" value="offence"/>
-      <option name="dice" value="strength"/>
-      <option name="bonus" value="1"/>
-      <option name="number" value="1"/>
-      <option name="bonusType" value="infantry_bonus"/>
-      <option name="impArtTech" value="true"/>
-      <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese:Pacific_Commonwealth:French:Dutch"/>
-    </attachment>
-    <attachment name="supportAttachmentInfantryAndMechInf" attachTo="artillery_china" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
-      <option name="unitType" value="infantry:mech_infantry"/>
-      <option name="faction" value="allied"/>
-      <option name="side" value="offence"/>
-      <option name="dice" value="strength"/>
-      <option name="bonus" value="1"/>
-      <option name="number" value="1"/>
-      <option name="bonusType" value="infantry_bonus"/>
-      <option name="impArtTech" value="true"/>
-      <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese:Pacific_Commonwealth:French:Dutch"/>
-    </attachment>
-    <attachment name="supportAttachmentTacticalBomber1" attachTo="fighter" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
-      <option name="unitType" value="tactical_bomber"/>
-      <option name="faction" value="allied"/>
-      <option name="side" value="offence"/>
-      <option name="dice" value="strength"/>
-      <option name="bonus" value="1"/>
-      <option name="number" value="1"/>
-      <option name="bonusType" value="combined_arms"/>
-      <option name="impArtTech" value="false"/>
-      <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese:Pacific_Commonwealth:French:Dutch"/>
-    </attachment>
-    <attachment name="supportAttachmentTacticalBomber2" attachTo="armour" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
-      <option name="unitType" value="tactical_bomber"/>
-      <option name="faction" value="allied"/>
-      <option name="side" value="offence"/>
-      <option name="dice" value="strength"/>
-      <option name="bonus" value="1"/>
-      <option name="number" value="1"/>
-      <option name="bonusType" value="combined_arms"/>
-      <option name="impArtTech" value="false"/>
-      <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese:Pacific_Commonwealth:French:Dutch"/>
-    </attachment>
-    <attachment name="supportAttachmentMechanizedTechnology" attachTo="armour" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
-      <option name="unitType" value="mech_infantry"/>
-      <option name="faction" value="allied"/>
-      <option name="side" value="offence"/>
-      <option name="dice" value="strength"/>
-      <option name="bonus" value="1"/>
-      <option name="number" value="1"/>
-      <option name="bonusType" value="infantry_bonus"/>
-      <option name="impArtTech" value="false"/>
-      <!-- left blank on purpose: <option name="players" value=""/>-->
     </attachment>
     <!--  National Objectives (A number of NOs are done with Conditions further down) -->
     <!-- German Objectives -->
@@ -5293,7 +5327,7 @@
       <unitPlacement unitType="fighter" territory="Japan" quantity="2" owner="Japanese"/>
       <unitPlacement unitType="tactical_bomber" territory="Japan" quantity="2" owner="Japanese"/>
       <unitPlacement unitType="bomber" territory="Japan" quantity="2" owner="Japanese"/>
-      <unitPlacement unitType="aaGun" territory="Japan" quantity="3" owner="Japanese"/>
+      <unitPlacement unitType="aaGun" territory="Japan" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="airfield" territory="Japan" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="harbour" territory="Japan" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="factory_major" territory="Japan" quantity="1" owner="Japanese"/>
@@ -5347,7 +5381,7 @@
       <unitPlacement unitType="transport" territory="20 Sea Zone" quantity="1" owner="Japanese"/>
       <!-- UK Pacific -->
       <unitPlacement unitType="infantry" territory="New South Wales" quantity="2" owner="Pacific_Commonwealth"/>
-      <unitPlacement unitType="aaGun" territory="New South Wales" quantity="2" owner="Pacific_Commonwealth"/>
+      <unitPlacement unitType="aaGun" territory="New South Wales" quantity="1" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="factory_minor" territory="New South Wales" quantity="1" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="harbour" territory="New South Wales" quantity="1" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="infantry" territory="New Zealand" quantity="1" owner="Pacific_Commonwealth"/>
@@ -5369,7 +5403,6 @@
       <unitPlacement unitType="mech_infantry" territory="Western United States" quantity="1" owner="Americans"/>
       <unitPlacement unitType="artillery" territory="Western United States" quantity="1" owner="Americans"/>
       <unitPlacement unitType="fighter" territory="Western United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="aaGun" territory="Western United States" quantity="2" owner="Americans"/>
       <unitPlacement unitType="airfield" territory="Western United States" quantity="1" owner="Americans"/>
       <unitPlacement unitType="harbour" territory="Western United States" quantity="1" owner="Americans"/>
       <unitPlacement unitType="factory_minor" territory="Western United States" quantity="1" owner="Americans"/>
@@ -5387,7 +5420,6 @@
       <unitPlacement unitType="infantry" territory="Eastern United States" quantity="1" owner="Americans"/>
       <unitPlacement unitType="fighter" territory="Eastern United States" quantity="1" owner="Americans"/>
       <unitPlacement unitType="artillery" territory="Eastern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="aaGun" territory="Eastern United States" quantity="2" owner="Americans"/>
       <unitPlacement unitType="airfield" territory="Eastern United States" quantity="1" owner="Americans"/>
       <unitPlacement unitType="harbour" territory="Eastern United States" quantity="1" owner="Americans"/>
       <unitPlacement unitType="factory_minor" territory="Eastern United States" quantity="1" owner="Americans"/>
@@ -5432,7 +5464,7 @@
       <unitPlacement unitType="mech_infantry" territory="United Kingdom" quantity="1" owner="British"/>
       <unitPlacement unitType="fighter" territory="United Kingdom" quantity="2" owner="British"/>
       <unitPlacement unitType="bomber" territory="United Kingdom" quantity="1" owner="British"/>
-      <unitPlacement unitType="aaGun" territory="United Kingdom" quantity="4" owner="British"/>
+      <unitPlacement unitType="aaGun" territory="United Kingdom" quantity="2" owner="British"/>
       <unitPlacement unitType="airfield" territory="United Kingdom" quantity="1" owner="British"/>
       <unitPlacement unitType="harbour" territory="United Kingdom" quantity="1" owner="British"/>
       <unitPlacement unitType="factory_major" territory="United Kingdom" quantity="1" owner="British"/>
@@ -5458,7 +5490,6 @@
       <unitPlacement unitType="infantry" territory="Scotland" quantity="2" owner="British"/>
       <unitPlacement unitType="fighter" territory="Scotland" quantity="1" owner="British"/>
       <unitPlacement unitType="airfield" territory="Scotland" quantity="1" owner="British"/>
-      <unitPlacement unitType="aaGun" territory="Scotland" quantity="1" owner="British"/>
       <unitPlacement unitType="destroyer" territory="71 Sea Zone" quantity="1" owner="British"/>
       <unitPlacement unitType="cruiser" territory="91 Sea Zone" quantity="1" owner="British"/>
       <unitPlacement unitType="cruiser" territory="98 Sea Zone" quantity="1" owner="British"/>
@@ -5483,7 +5514,7 @@
       <unitPlacement unitType="fighter" territory="Burma" quantity="1" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="infantry" territory="India" quantity="6" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="artillery" territory="India" quantity="1" owner="Pacific_Commonwealth"/>
-      <unitPlacement unitType="aaGun" territory="India" quantity="3" owner="Pacific_Commonwealth"/>
+      <unitPlacement unitType="aaGun" territory="India" quantity="1" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="fighter" territory="India" quantity="1" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="tactical_bomber" territory="India" quantity="1" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="airfield" territory="India" quantity="1" owner="Pacific_Commonwealth"/>
@@ -5510,7 +5541,6 @@
       <unitPlacement unitType="harbour" territory="Southern France" quantity="1" owner="French"/>
       <unitPlacement unitType="barracks" territory="Southern France" quantity="1" owner="French"/>
       <unitPlacement unitType="infantry" territory="United Kingdom" quantity="2" owner="French"/>
-      <unitPlacement unitType="fighter" territory="United Kingdom" quantity="1" owner="French"/>
       <unitPlacement unitType="infantry" territory="Syria" quantity="1" owner="French"/>
       <unitPlacement unitType="infantry" territory="Tunisia" quantity="1" owner="French"/>
       <unitPlacement unitType="infantry" territory="Morocco" quantity="1" owner="French"/>
@@ -5530,7 +5560,7 @@
       <unitPlacement unitType="mech_infantry" territory="Western Germany" quantity="4" owner="Germans"/>
       <unitPlacement unitType="fighter" territory="Western Germany" quantity="2" owner="Germans"/>
       <unitPlacement unitType="tactical_bomber" territory="Western Germany" quantity="3" owner="Germans"/>
-      <unitPlacement unitType="aaGun" territory="Western Germany" quantity="3" owner="Germans"/>
+      <unitPlacement unitType="aaGun" territory="Western Germany" quantity="1" owner="Germans"/>
       <unitPlacement unitType="factory_major" territory="Western Germany" quantity="1" owner="Germans"/>
       <unitPlacement unitType="harbour" territory="Western Germany" quantity="1" owner="Germans"/>
       <unitPlacement unitType="airfield" territory="Western Germany" quantity="1" owner="Germans"/>
@@ -5542,7 +5572,7 @@
       <unitPlacement unitType="tactical_bomber" territory="Germany" quantity="1" owner="Germans"/>
       <unitPlacement unitType="bomber" territory="Germany" quantity="2" owner="Germans"/>
       <unitPlacement unitType="factory_major" territory="Germany" quantity="1" owner="Germans"/>
-      <unitPlacement unitType="aaGun" territory="Germany" quantity="3" owner="Germans"/>
+      <unitPlacement unitType="aaGun" territory="Germany" quantity="2" owner="Germans"/>
       <unitPlacement unitType="infantry" territory="Slovakia Hungary" quantity="2" owner="Germans"/>
       <unitPlacement unitType="armour" territory="Slovakia Hungary" quantity="1" owner="Germans"/>
       <unitPlacement unitType="fighter" territory="Slovakia Hungary" quantity="1" owner="Germans"/>
@@ -5567,11 +5597,11 @@
       <unitPlacement unitType="artillery" territory="Northern Italy" quantity="2" owner="Italians"/>
       <unitPlacement unitType="armour" territory="Northern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="bomber" territory="Northern Italy" quantity="1" owner="Italians"/>
-      <unitPlacement unitType="aaGun" territory="Northern Italy" quantity="2" owner="Italians"/>
+      <unitPlacement unitType="aaGun" territory="Northern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="factory_major" territory="Northern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="infantry" territory="Southern Italy" quantity="6" owner="Italians"/>
       <unitPlacement unitType="fighter" territory="Southern Italy" quantity="2" owner="Italians"/>
-      <unitPlacement unitType="aaGun" territory="Southern Italy" quantity="2" owner="Italians"/>
+      <unitPlacement unitType="aaGun" territory="Southern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="harbour" territory="Southern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="airfield" territory="Southern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="factory_minor" territory="Southern Italy" quantity="1" owner="Italians"/>
@@ -5604,7 +5634,7 @@
       <unitPlacement unitType="armour" territory="Russia" quantity="1" owner="Russians"/>
       <unitPlacement unitType="fighter" territory="Russia" quantity="1" owner="Russians"/>
       <unitPlacement unitType="tactical_bomber" territory="Russia" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="aaGun" territory="Russia" quantity="2" owner="Russians"/>
+      <unitPlacement unitType="aaGun" territory="Russia" quantity="1" owner="Russians"/>
       <unitPlacement unitType="airfield" territory="Russia" quantity="1" owner="Russians"/>
       <unitPlacement unitType="factory_major" territory="Russia" quantity="1" owner="Russians"/>
       <unitPlacement unitType="armour" territory="Volgograd" quantity="1" owner="Russians"/>
@@ -5620,7 +5650,7 @@
       <unitPlacement unitType="infantry" territory="Novgorod" quantity="6" owner="Russians"/>
       <unitPlacement unitType="artillery" territory="Novgorod" quantity="1" owner="Russians"/>
       <unitPlacement unitType="fighter" territory="Novgorod" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="aaGun" territory="Novgorod" quantity="2" owner="Russians"/>
+      <unitPlacement unitType="aaGun" territory="Novgorod" quantity="1" owner="Russians"/>
       <unitPlacement unitType="airfield" territory="Novgorod" quantity="1" owner="Russians"/>
       <unitPlacement unitType="harbour" territory="Novgorod" quantity="1" owner="Russians"/>
       <unitPlacement unitType="factory_minor" territory="Novgorod" quantity="1" owner="Russians"/>
@@ -5629,7 +5659,7 @@
       <unitPlacement unitType="barracks" territory="Ukraine" quantity="1" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Amur" quantity="6" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Sakha" quantity="6" owner="Russians"/>
-      <unitPlacement unitType="aaGun" territory="Sakha" quantity="2" owner="Russians"/>
+      <unitPlacement unitType="aaGun" territory="Sakha" quantity="1" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Buryatia" quantity="6" owner="Russians"/>
       <unitPlacement unitType="cruiser" territory="115 Sea Zone" quantity="1" owner="Russians"/>
       <unitPlacement unitType="submarine" territory="115 Sea Zone" quantity="1" owner="Russians"/>
@@ -5868,10 +5898,10 @@
     <property name="Scrambled Units Return To Base" value="true" editable="true">
       <boolean/>
     </property>
-    <property name="Scramble To Sea Only" value="true" editable="true">
+    <property name="Scramble To Sea Only" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Scramble From Island Only" value="false" editable="true">
+    <property name="Scramble From Island Only" value="false" editable="false">
       <boolean/>
     </property>
     <property name="Scramble To Any Amphibious Assault" value="true" editable="true">
@@ -5940,7 +5970,7 @@
     <property name="Unlimited Constructions" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="Blitz Through Factories And AA Restricted" value="true" editable="false">
+    <property name="Blitz Through Factories And AA Restricted" value="false" editable="false">
       <boolean/>
     </property>
     <property name="Roll AA Individually" value="true" editable="false">
@@ -5952,7 +5982,7 @@
     <property name="AA Territory Restricted" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="Force AA Attacks For Last Step Of Fly Over" value="true" editable="false">
+    <property name="Force AA Attacks For Last Step Of Fly Over" value="false" editable="false">
       <boolean/>
     </property>
     <property name="Multiple AA Per Territory" value="true" editable="false">
