@@ -1448,7 +1448,7 @@
       <result resourceOrUnit="carrier" quantity="1"/>
     </productionRule>
     <productionRule name="buyDestroyer">
-      <cost resource="PUs" quantity="6"/>
+      <cost resource="PUs" quantity="5"/>
       <result resourceOrUnit="destroyer" quantity="1"/>
     </productionRule>
     <productionRule name="buyCruiser">
@@ -5485,7 +5485,7 @@
       <unitPlacement unitType="infantry" territory="Malta" quantity="1" owner="British"/>
       <unitPlacement unitType="fighter" territory="Malta" quantity="1" owner="British"/>
       <unitPlacement unitType="aaGun" territory="Malta" quantity="1" owner="British"/>
-      <unitPlacement unitType="airbase" territory="Malta" quantity="1" owner="British"/>
+      <unitPlacement unitType="airfield" territory="Malta" quantity="1" owner="British"/>
       <unitPlacement unitType="infantry" territory="Alexandria" quantity="2" owner="British"/>
       <unitPlacement unitType="artillery" territory="Alexandria" quantity="1" owner="British"/>
       <unitPlacement unitType="armour" territory="Alexandria" quantity="1" owner="British"/>
