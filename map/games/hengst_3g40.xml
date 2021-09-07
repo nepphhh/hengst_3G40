@@ -5598,7 +5598,6 @@
       <unitPlacement unitType="tactical_bomber" territory="Poland" quantity="1" owner="Germans"/>
       <unitPlacement unitType="infantry" territory="Romania" quantity="2" owner="Germans"/>
       <unitPlacement unitType="armour" territory="Romania" quantity="1" owner="Germans"/>
-      <unitPlacement unitType="barracks" territory="Romania" quantity="1" owner="Germans"/>
       <unitPlacement unitType="infantry" territory="Norway" quantity="3" owner="Germans"/>
       <unitPlacement unitType="fighter" territory="Norway" quantity="1" owner="Germans"/>
       <unitPlacement unitType="aaGun" territory="Norway" quantity="1" owner="Germans"/>
