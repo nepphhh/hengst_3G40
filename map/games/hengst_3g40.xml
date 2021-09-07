@@ -1734,14 +1734,14 @@
       <option name="attack" value="4"/>
       <option name="defense" value="3"/>
       <option name="blockade" value="2"/>
-      <option name="isAAforCombatOnly" value="true"/>
+      <!-- <option name="isAAforCombatOnly" value="true"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="maxRoundsAA" value="-1"/>
       <option name="attackAA" value="1"/>
       <option name="offensiveAttackAA" value="1"/>
       <option name="maxAAattacks" value="1"/>
       <option name="mayOverStackAA" value="true"/>
-      <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
+      <option name="targetsAA" value="fighter:tactical_bomber:bomber"/> -->
       <option name="requiresUnits" value="factory_minor"/>
       <option name="requiresUnits" value="factory_major"/>
     </attachment>
@@ -1823,7 +1823,7 @@
       <option name="isAAforCombatOnly" value="true"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="maxRoundsAA" value="-1"/>
-      <option name="attackAA" value="1"/>
+      <option name="attackAA" value="0"/>
       <option name="offensiveAttackAA" value="1"/>
       <option name="maxAAattacks" value="1"/>
       <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
@@ -1839,12 +1839,12 @@
       <option name="canBombard" value="true"/>
       <option name="hitPoints" value="2"/>
       <option name="blockade" value="1"/>
-      <option name="isAAforCombatOnly" value="true"/>
+      <!-- <option name="isAAforCombatOnly" value="true"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="maxRoundsAA" value="-1"/>
       <option name="attackAA" value="1"/>
       <option name="offensiveAttackAA" value="1"/>
-      <option name="maxAAattacks" value="1"/>
+      <option name="maxAAattacks" value="1"/> -->
       <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
       <option name="requiresUnits" value="factory_major:harbour"/>
     </attachment>
@@ -1909,6 +1909,17 @@
       <option name="bonus" value="-1"/>
       <!-- Not quite infinity, but probably close enough -->
       <option name="number" value="9999"/>
+      <option name="bonusType" value="combined_arms"/>
+      <option name="impArtTech" value="false"/>
+      <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese"/>
+    </attachment>   
+    <attachment name="supportAttachmentArmor" attachTo="tactical_bomber" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
+      <option name="unitType" value="armor"/>
+      <option name="faction" value="allied"/>
+      <option name="side" value="offence"/>
+      <option name="dice" value="strength"/>
+      <option name="bonus" value="1"/>
+      <option name="number" value="1"/>
       <option name="bonusType" value="combined_arms"/>
       <option name="impArtTech" value="false"/>
       <option name="players" value="Germans:Russians:Americans:British:Pacific_Commonwealth:French:Italians:Japanese:Chinese"/>
@@ -5560,19 +5571,20 @@
       <unitPlacement unitType="mech_infantry" territory="Western Germany" quantity="4" owner="Germans"/>
       <unitPlacement unitType="fighter" territory="Western Germany" quantity="2" owner="Germans"/>
       <unitPlacement unitType="tactical_bomber" territory="Western Germany" quantity="3" owner="Germans"/>
-      <unitPlacement unitType="aaGun" territory="Western Germany" quantity="1" owner="Germans"/>
+      <unitPlacement unitType="aaGun" territory="Western Germany" quantity="2" owner="Germans"/>
       <unitPlacement unitType="factory_major" territory="Western Germany" quantity="1" owner="Germans"/>
       <unitPlacement unitType="harbour" territory="Western Germany" quantity="1" owner="Germans"/>
       <unitPlacement unitType="airfield" territory="Western Germany" quantity="1" owner="Germans"/>
       <unitPlacement unitType="infantry" territory="Greater Southern Germany" quantity="6" owner="Germans"/>
       <unitPlacement unitType="artillery" territory="Greater Southern Germany" quantity="2" owner="Germans"/>
+      <unitPlacement unitType="aaGun" territory="Greater Southern Germany" quantity="1" owner="Germans"/>
       <unitPlacement unitType="armour" territory="Greater Southern Germany" quantity="3" owner="Germans"/>
       <unitPlacement unitType="infantry" territory="Germany" quantity="11" owner="Germans"/>
       <unitPlacement unitType="artillery" territory="Germany" quantity="3" owner="Germans"/>
       <unitPlacement unitType="tactical_bomber" territory="Germany" quantity="1" owner="Germans"/>
       <unitPlacement unitType="bomber" territory="Germany" quantity="2" owner="Germans"/>
       <unitPlacement unitType="factory_major" territory="Germany" quantity="1" owner="Germans"/>
-      <unitPlacement unitType="aaGun" territory="Germany" quantity="2" owner="Germans"/>
+      <unitPlacement unitType="aaGun" territory="Germany" quantity="1" owner="Germans"/>
       <unitPlacement unitType="infantry" territory="Slovakia Hungary" quantity="2" owner="Germans"/>
       <unitPlacement unitType="armour" territory="Slovakia Hungary" quantity="1" owner="Germans"/>
       <unitPlacement unitType="fighter" territory="Slovakia Hungary" quantity="1" owner="Germans"/>
@@ -5583,6 +5595,7 @@
       <unitPlacement unitType="armour" territory="Romania" quantity="1" owner="Germans"/>
       <unitPlacement unitType="infantry" territory="Norway" quantity="3" owner="Germans"/>
       <unitPlacement unitType="fighter" territory="Norway" quantity="1" owner="Germans"/>
+      <unitPlacement unitType="aaGun" territory="Norway" quantity="1" owner="Germans"/>
       <unitPlacement unitType="infantry" territory="Denmark" quantity="2" owner="Germans"/>
       <unitPlacement unitType="submarine" territory="103 Sea Zone" quantity="1" owner="Germans"/>
       <unitPlacement unitType="submarine" territory="108 Sea Zone" quantity="1" owner="Germans"/>
