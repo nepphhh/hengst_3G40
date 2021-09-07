@@ -1686,7 +1686,8 @@
       <option name="maxAAattacks" value="2"/>
       <option name="mayOverStackAA" value="true"/>
       <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
-      <option name="requiresUnits" value="factory_minor:factory_major"/>
+      <option name="requiresUnits" value="factory_minor"/>
+      <option name="requiresUnits" value="factory_major"/>
     </attachment>
     <!-- Armour -->
     <attachment name="unitAttachment" attachTo="armour" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
