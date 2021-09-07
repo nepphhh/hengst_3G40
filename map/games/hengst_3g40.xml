@@ -5346,10 +5346,9 @@
       <unitPlacement unitType="harbour" territory="Japan" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="factory_major" territory="Japan" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="infantry" territory="Manchuria" quantity="4" owner="Japanese"/>
-      <unitPlacement unitType="barracks" territory="Manchuria" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="mech_infantry" territory="Manchuria" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="artillery" territory="Manchuria" quantity="1" owner="Japanese"/>
-      <unitPlacement unitType="aaGun" territory="Manchuria" quantity="1" owner="Japanese"/>
+      <unitPlacement unitType="aaGun" territory="Manchuria" quantity="2" owner="Japanese"/>
       <unitPlacement unitType="fighter" territory="Manchuria" quantity="2" owner="Japanese"/>
       <unitPlacement unitType="tactical_bomber" territory="Manchuria" quantity="2" owner="Japanese"/>
       <unitPlacement unitType="infantry" territory="Paulau Island" quantity="1" owner="Japanese"/>
