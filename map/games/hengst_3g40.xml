@@ -1765,7 +1765,7 @@
       <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
       <option name="requiresUnits" value="factory_minor"/>
       <option name="requiresUnits" value="factory_major"/>
-      <option name="canNotTarget" value="submarine:destroyer:cruiser:battleship:carrier:transport"/>
+      <!-- <option name="canNotTarget" value="submarine:destroyer:cruiser:battleship:carrier:transport"/> -->
     </attachment>
     <!-- Transport -->
     <attachment name="unitAttachment" attachTo="transport" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -5341,12 +5341,12 @@
       <unitPlacement unitType="fighter" territory="Japan" quantity="2" owner="Japanese"/>
       <unitPlacement unitType="tactical_bomber" territory="Japan" quantity="2" owner="Japanese"/>
       <unitPlacement unitType="bomber" territory="Japan" quantity="2" owner="Japanese"/>
-      <unitPlacement unitType="aaGun" territory="Japan" quantity="1" owner="Japanese"/>
+      <unitPlacement unitType="aaGun" territory="Japan" quantity="2" owner="Japanese"/>
       <unitPlacement unitType="airfield" territory="Japan" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="harbour" territory="Japan" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="factory_major" territory="Japan" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="infantry" territory="Manchuria" quantity="4" owner="Japanese"/>
-      <unitPlacement unitType="barracks" territory="Manchuria" quantity="6" owner="Japanese"/>
+      <unitPlacement unitType="barracks" territory="Manchuria" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="mech_infantry" territory="Manchuria" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="artillery" territory="Manchuria" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="aaGun" territory="Manchuria" quantity="1" owner="Japanese"/>
@@ -5373,6 +5373,7 @@
       <unitPlacement unitType="infantry" territory="Kiangsu" quantity="3" owner="Japanese"/>
       <unitPlacement unitType="artillery" territory="Kiangsu" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="fighter" territory="Kiangsu" quantity="1" owner="Japanese"/>
+      <unitPlacement unitType="aaGun" territory="Kiangsu" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="tactical_bomber" territory="Kiangsu" quantity="1" owner="Japanese"/>
       <unitPlacement unitType="infantry" territory="Korea" quantity="4" owner="Japanese"/>
       <unitPlacement unitType="fighter" territory="Korea" quantity="1" owner="Japanese"/>
@@ -5486,6 +5487,7 @@
       <unitPlacement unitType="artillery" territory="France" quantity="1" owner="British"/>
       <unitPlacement unitType="armour" territory="France" quantity="1" owner="British"/>
       <unitPlacement unitType="fighter" territory="Gibraltar" quantity="1" owner="British"/>
+      <unitPlacement unitType="aaGun" territory="Gibraltar" quantity="1" owner="British"/>
       <unitPlacement unitType="harbour" territory="Gibraltar" quantity="1" owner="British"/>
       <unitPlacement unitType="infantry" territory="Malta" quantity="1" owner="British"/>
       <unitPlacement unitType="fighter" territory="Malta" quantity="1" owner="British"/>
@@ -5619,7 +5621,7 @@
       <unitPlacement unitType="factory_major" territory="Northern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="infantry" territory="Southern Italy" quantity="6" owner="Italians"/>
       <unitPlacement unitType="fighter" territory="Southern Italy" quantity="2" owner="Italians"/>
-      <unitPlacement unitType="aaGun" territory="Southern Italy" quantity="1" owner="Italians"/>
+      <unitPlacement unitType="aaGun" territory="Southern Italy" quantity="2" owner="Italians"/>
       <unitPlacement unitType="harbour" territory="Southern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="airfield" territory="Southern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="factory_minor" territory="Southern Italy" quantity="1" owner="Italians"/>
@@ -5638,7 +5640,7 @@
       <unitPlacement unitType="cruiser" territory="95 Sea Zone" quantity="1" owner="Italians"/>
       <unitPlacement unitType="submarine" territory="95 Sea Zone" quantity="1" owner="Italians"/>
       <unitPlacement unitType="transport" territory="95 Sea Zone" quantity="1" owner="Italians"/>
-      <unitPlacement unitType="destroyer" territory="96 Sea Zone" quantity="1" owner="Italians"/>
+      <unitPlacement unitType="destroyer" territory="96 Sea Zone" quantity="2" owner="Italians"/>
       <unitPlacement unitType="transport" territory="96 Sea Zone" quantity="1" owner="Italians"/>
       <unitPlacement unitType="cruiser" territory="97 Sea Zone" quantity="1" owner="Italians"/>
       <unitPlacement unitType="battleship" territory="97 Sea Zone" quantity="1" owner="Italians"/>
@@ -5662,6 +5664,7 @@
       <unitPlacement unitType="infantry" territory="Bessarabia" quantity="2" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Western Ukraine" quantity="1" owner="Russians"/>
       <unitPlacement unitType="artillery" territory="Western Ukraine" quantity="1" owner="Russians"/>
+      <unitPlacement unitType="aaGun" territory="Western Ukraine" quantity="1" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Eastern Poland" quantity="2" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Baltic States" quantity="3" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Belarus" quantity="1" owner="Russians"/>
