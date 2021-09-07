@@ -3371,6 +3371,7 @@
     </attachment>
     <!-- British Triggers -->
     <attachment name="triggerAttachment_Pacific_Commonwealth_War_Production_India" attachTo="Pacific_Commonwealth" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="trigger" value="conditionAttachment_Pacific_Commonwealth_At_War_With_Japan"/>
       <option name="removeUnits" value="India:factory_minor"/>
       <option name="placement" value="India:factory_major"/>
       <option name="uses" value="1"/>
@@ -3389,8 +3390,7 @@
 	  <option name="notification" value="American_Lend_Lease_Notification"/>
       <option name="uses" value="3"/>
       <option name="when" value="after:britishEndTurn"/>
-    </attachment>
-	
+    </attachment>	
     <!-- Chinese Triggers -->
     <attachment name="triggerAttachment_Chinese_Artillery_Supplies" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="objectiveAttachment_Chinese_1_Burma_Road"/>
@@ -3483,18 +3483,21 @@
       <option name="resourceCount" value="5"/>
     </attachment>
     <attachment name="triggerAttachment_Americans_War_Production_Eastern" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="trigger" value="conditionAttachment_Americans_At_War_With_At_Least_One_Axis"/>
       <option name="removeUnits" value="Eastern United States:factory_minor"/>
       <option name="placement" value="Eastern United States:factory_major"/>
       <option name="uses" value="1"/>
       <option name="when" value="after:americansPolitics"/>
     </attachment>
     <attachment name="triggerAttachment_Americans_War_Production_Central" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="trigger" value="conditionAttachment_Americans_At_War_With_At_Least_One_Axis"/>
       <option name="removeUnits" value="Central United States:factory_minor"/>
       <option name="placement" value="Central United States:factory_major"/>
       <option name="uses" value="1"/>
       <option name="when" value="after:americansPolitics"/>
     </attachment>
     <attachment name="triggerAttachment_Americans_War_Production_Western" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="trigger" value="conditionAttachment_Americans_At_War_With_At_Least_One_Axis"/>
       <option name="removeUnits" value="Western United States:factory_minor"/>
       <option name="placement" value="Western United States:factory_major"/>
       <option name="uses" value="1"/>
