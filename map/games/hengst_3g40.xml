@@ -1857,8 +1857,8 @@
       <option name="carrierCapacity" value="2"/>
       <option name="hitPoints" value="2"/>
       <option name="blockade" value="0"/>
-      <option name="unitProperty" value="isAirBase" count="true"/>
-      <option name="unitProperty" value="maxScrambleCount" count="1"/>
+      <option name="isAirBase" value="true"/>
+      <option name="maxScrambleCount" value="1"/>
       <!-- whenCombatDamaged means that when this unit has x:y damage on it, it will have this effect -->
       <option name="whenCombatDamaged" value="unitsMayNotLandOnCarrier" count="1:2"/>
       <option name="whenCombatDamaged" value="unitsMayNotLeaveAlliedCarrier" count="1:2"/>
