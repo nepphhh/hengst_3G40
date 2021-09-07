@@ -1428,7 +1428,7 @@
       <result resourceOrUnit="armour" quantity="1"/>
     </productionRule>
     <productionRule name="buyFighter">
-      <cost resource="PUs" quantity="8"/>
+      <cost resource="PUs" quantity="9"/>
       <result resourceOrUnit="fighter" quantity="1"/>
     </productionRule>
     <productionRule name="buyTactical_Bomber">
@@ -1464,7 +1464,7 @@
       <result resourceOrUnit="submarine" quantity="1"/>
     </productionRule>
     <productionRule name="buyBarracks">
-      <cost resource="PUs" quantity="10"/>
+      <cost resource="PUs" quantity="12"/>
       <result resourceOrUnit="barracks" quantity="1"/>
     </productionRule>
     <productionRule name="buyAirfield">
@@ -1656,8 +1656,6 @@
       <option name="canBlitz" value="true"/>
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
-      <option name="requiresUnits" value="factory_minor"/>
-      <option name="requiresUnits" value="factory_major"/>
     </attachment>
     <!-- Artillery -->
     <attachment name="unitAttachment" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1827,8 +1825,7 @@
       <option name="offensiveAttackAA" value="1"/>
       <option name="maxAAattacks" value="1"/>
       <option name="targetsAA" value="fighter:tactical_bomber:bomber"/>
-      <option name="requiresUnits" value="factory_minor"/>
-      <option name="requiresUnits" value="factory_major"/>
+      <option name="requiresUnits" value="factory_major:harbour"/>
     </attachment>
     <!-- Battle Ship -->
     <attachment name="unitAttachment" attachTo="battleship" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1927,8 +1924,6 @@
     <!-- Barracks -->
     <attachment name="unitAttachment" attachTo="barracks" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
-      <option name="unitPlacementRestrictions" value="Ceylon:Sumatra:Java:Borneo:Hainan:Philippines:Celebes:Dutch New Guinea:Paulau Island:New Guinea:New Britain:Solomon Islands:New Hebrides:New Zealand:Fiji:Samoa:Line Islands:Johnston Island:Hawaiian Islands:Midway:Iwo Jima:Aleutian Islands:Gilbert Islands:Marshall Islands:Caroline Islands:Wake Island:Marianas:Guam:Formosa:Okinawa:West Indies:Greenland:Iceland:Sardinia:Sicily:French Madagascar:Crete:Cyprus"/>
-      <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
       <option name="destroyedWhenCapturedBy" value="Germans:Pacific_Commonwealth:Japanese:British:Italians:Chinese:Russians:Americans:French"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="canProduceXUnits" value="3"/>
@@ -1945,7 +1940,6 @@
     <!-- Factory Major -->
     <attachment name="unitAttachment" attachTo="factory_major" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
-      <option name="unitPlacementRestrictions" value="Ceylon:Sumatra:Java:Borneo:Hainan:Philippines:Celebes:Dutch New Guinea:Paulau Island:New Guinea:New Britain:Solomon Islands:New Hebrides:New Zealand:Fiji:Samoa:Line Islands:Johnston Island:Hawaiian Islands:Midway:Iwo Jima:Aleutian Islands:Gilbert Islands:Marshall Islands:Caroline Islands:Wake Island:Marianas:Guam:Formosa:Okinawa:West Indies:Greenland:Iceland:Sardinia:Sicily:French Madagascar:Crete:Cyprus"/>
       <option name="canOnlyBePlacedInTerritoryValuedAtX" value="3"/>
       <option name="canProduceXUnits" value="10"/>
       <option name="maxDamage" value="20"/>
@@ -2547,7 +2541,7 @@
       <option name="production" value="1"/>
     </attachment>
     <attachment name="territoryAttachment" attachTo="Sicily" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-      <option name="production" value="0"/>
+      <option name="production" value="1"/>
     </attachment>
     <attachment name="territoryAttachment" attachTo="Italian Somaliland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
@@ -2562,7 +2556,7 @@
       <option name="production" value="1"/>
     </attachment>
     <attachment name="territoryAttachment" attachTo="Sardinia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-      <option name="production" value="0"/>
+      <option name="production" value="1"/>
     </attachment>
     <attachment name="territoryAttachment" attachTo="Belarus" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="1"/>
@@ -5408,6 +5402,7 @@
       <unitPlacement unitType="fighter" territory="Queensland" quantity="1" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="airfield" territory="Queensland" quantity="1" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="harbour" territory="Queensland" quantity="1" owner="Pacific_Commonwealth"/>
+      <unitPlacement unitType="barracks" territory="Queensland" quantity="1" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="infantry" territory="Malaya" quantity="1" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="infantry" territory="Egypt" quantity="2" owner="Pacific_Commonwealth"/>
       <unitPlacement unitType="destroyer" territory="62 Sea Zone" quantity="1" owner="Pacific_Commonwealth"/>
@@ -5486,11 +5481,11 @@
       <unitPlacement unitType="artillery" territory="France" quantity="1" owner="British"/>
       <unitPlacement unitType="armour" territory="France" quantity="1" owner="British"/>
       <unitPlacement unitType="fighter" territory="Gibraltar" quantity="1" owner="British"/>
-      <unitPlacement unitType="aaGun" territory="Gibraltar" quantity="1" owner="British"/>
       <unitPlacement unitType="harbour" territory="Gibraltar" quantity="1" owner="British"/>
       <unitPlacement unitType="infantry" territory="Malta" quantity="1" owner="British"/>
       <unitPlacement unitType="fighter" territory="Malta" quantity="1" owner="British"/>
       <unitPlacement unitType="aaGun" territory="Malta" quantity="1" owner="British"/>
+      <unitPlacement unitType="airbase" territory="Malta" quantity="1" owner="British"/>
       <unitPlacement unitType="infantry" territory="Alexandria" quantity="2" owner="British"/>
       <unitPlacement unitType="artillery" territory="Alexandria" quantity="1" owner="British"/>
       <unitPlacement unitType="armour" territory="Alexandria" quantity="1" owner="British"/>
@@ -5655,14 +5650,14 @@
       <unitPlacement unitType="aaGun" territory="Russia" quantity="1" owner="Russians"/>
       <unitPlacement unitType="airfield" territory="Russia" quantity="1" owner="Russians"/>
       <unitPlacement unitType="factory_major" territory="Russia" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="armour" territory="Volgograd" quantity="1" owner="Russians"/>
+      <unitPlacement unitType="armour" territory="Volgograd" quantity="2" owner="Russians"/>
       <unitPlacement unitType="mech_infantry" territory="Volgograd" quantity="1" owner="Russians"/>
       <unitPlacement unitType="factory_minor" territory="Volgograd" quantity="1" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Caucasus" quantity="2" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Bessarabia" quantity="2" owner="Russians"/>
-      <unitPlacement unitType="infantry" territory="Western Ukraine" quantity="1" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Western Ukraine" quantity="2" owner="Russians"/>
       <unitPlacement unitType="artillery" territory="Western Ukraine" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="aaGun" territory="Western Ukraine" quantity="1" owner="Russians"/>
+      <unitPlacement unitType="aaGun" territory="Western Ukraine" quantity="2" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Eastern Poland" quantity="2" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Baltic States" quantity="3" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Belarus" quantity="1" owner="Russians"/>
