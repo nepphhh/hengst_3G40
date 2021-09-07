@@ -5892,19 +5892,19 @@
     <property name="WW2V3" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Scramble Rules In Effect" value="true" editable="true">
+    <property name="Scramble Rules In Effect" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Scrambled Units Return To Base" value="true" editable="true">
+    <property name="Scrambled Units Return To Base" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Scramble To Sea Only" value="true" editable="false">
+    <property name="Scramble To Sea Only" value="false" editable="false">
       <boolean/>
     </property>
     <property name="Scramble From Island Only" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="Scramble To Any Amphibious Assault" value="true" editable="true">
+    <property name="Scramble To Any Amphibious Assault" value="true" editable="false">
       <boolean/>
     </property>
     <property name="Airborne Attacks Only In Existing Battles" value="true" editable="false">
