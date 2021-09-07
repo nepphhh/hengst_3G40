@@ -5611,13 +5611,13 @@
       <unitPlacement unitType="armour" territory="Northern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="bomber" territory="Northern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="aaGun" territory="Northern Italy" quantity="1" owner="Italians"/>
-      <unitPlacement unitType="factory_major" territory="Northern Italy" quantity="1" owner="Italians"/>
+      <unitPlacement unitType="factory_minor" territory="Northern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="infantry" territory="Southern Italy" quantity="6" owner="Italians"/>
       <unitPlacement unitType="fighter" territory="Southern Italy" quantity="2" owner="Italians"/>
       <unitPlacement unitType="aaGun" territory="Southern Italy" quantity="2" owner="Italians"/>
       <unitPlacement unitType="harbour" territory="Southern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="airfield" territory="Southern Italy" quantity="1" owner="Italians"/>
-      <unitPlacement unitType="factory_minor" territory="Southern Italy" quantity="1" owner="Italians"/>
+      <unitPlacement unitType="factory_major" territory="Southern Italy" quantity="1" owner="Italians"/>
       <unitPlacement unitType="infantry" territory="Albania" quantity="2" owner="Italians"/>
       <unitPlacement unitType="armour" territory="Albania" quantity="1" owner="Italians"/>
       <unitPlacement unitType="infantry" territory="Italian Somaliland" quantity="1" owner="Italians"/>
