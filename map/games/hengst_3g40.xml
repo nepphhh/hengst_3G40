@@ -3372,12 +3372,12 @@
       <option name="when" value="after:pacific_commonwealthPolitics"/>
     </attachment>
     <attachment name="triggerAttachment_British_Lend_Lease_From_US" attachTo="British" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-      <option name="trigger" value="conditionAttachment_British_Lend_Lease_Eligible"/>
-      <option name="placement" value="Quebec:fighter"/>
-	  <option name="placement" value="106 Sea Zone:destroyer"/>
-	  <!-- <option name="notification" value="American_Lend_Lease_Notification"/> -->
-      <option name="uses" value="3"/>
-      <option name="when" value="after:britishEndTurn"/>
+      <!-- <option name="trigger" value="conditionAttachment_British_Lend_Lease_Eligible"/> -->
+      <!-- <option name="placement" value="Quebec:fighter"/> -->
+      <!-- <option name="placement" value="106 Sea Zone:destroyer"/> -->
+      <!-- <option name="notification" value="American_Lend_Lease_Notification"/> -->
+      <!-- <option name="uses" value="3"/> -->
+      <!-- <option name="when" value="after:britishEndTurn"/> -->
     </attachment>
 	<attachment name="triggerAttachment_British_Lend_Lease_From_US_Notification" attachTo="British" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="trigger" value="conditionAttachment_British_Lend_Lease_Eligible"/>
