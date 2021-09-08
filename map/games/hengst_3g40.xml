@@ -1437,7 +1437,7 @@
       <result resourceOrUnit="armour" quantity="1"/>
     </productionRule>
     <productionRule name="buyFighter">
-      <cost resource="PUs" quantity="8"/>
+      <cost resource="PUs" quantity="9"/>
       <result resourceOrUnit="fighter" quantity="1"/>
     </productionRule>
     <productionRule name="buyTactical_Bomber">
@@ -1465,7 +1465,7 @@
       <result resourceOrUnit="destroyer" quantity="1"/>
     </productionRule>
     <productionRule name="buyCruiser">
-      <cost resource="PUs" quantity="9"/>
+      <cost resource="PUs" quantity="10"/>
       <result resourceOrUnit="cruiser" quantity="1"/>
     </productionRule>
     <productionRule name="buyBattleship">
@@ -3371,20 +3371,20 @@
       <option name="uses" value="1"/>
       <option name="when" value="after:pacific_commonwealthPolitics"/>
     </attachment>
-    <attachment name="triggerAttachment_British_Lend_Lease_From_US" attachTo="British" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <!-- <attachment name="triggerAttachment_British_Lend_Lease_From_US" attachTo="British" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player"> -->
       <!-- <option name="trigger" value="conditionAttachment_British_Lend_Lease_Eligible"/> -->
       <!-- <option name="placement" value="Quebec:fighter"/> -->
       <!-- <option name="placement" value="106 Sea Zone:destroyer"/> -->
       <!-- <option name="notification" value="American_Lend_Lease_Notification"/> -->
       <!-- <option name="uses" value="3"/> -->
       <!-- <option name="when" value="after:britishEndTurn"/> -->
-    </attachment>
-	<attachment name="triggerAttachment_British_Lend_Lease_From_US_Notification" attachTo="British" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-      <option name="trigger" value="conditionAttachment_British_Lend_Lease_Eligible"/>
-	  <option name="notification" value="American_Lend_Lease_Notification"/>
-      <option name="uses" value="3"/>
-      <option name="when" value="after:britishEndTurn"/>
-    </attachment>	
+    <!-- </attachment> -->
+	  <!-- <attachment name="triggerAttachment_British_Lend_Lease_From_US_Notification" attachTo="British" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player"> -->
+      <!-- <option name="trigger" value="conditionAttachment_British_Lend_Lease_Eligible"/> -->
+      <!-- <option name="notification" value="American_Lend_Lease_Notification"/> -->
+      <!-- <option name="uses" value="3"/> -->
+      <!-- <option name="when" value="after:britishEndTurn"/> -->
+    <!-- </attachment>	 -->
     <!-- Chinese Triggers -->
     <attachment name="triggerAttachment_Chinese_Artillery_Supplies" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="objectiveAttachment_Chinese_1_Burma_Road"/>
