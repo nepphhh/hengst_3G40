@@ -1457,7 +1457,7 @@
       <result resourceOrUnit="carrier" quantity="1"/>
     </productionRule>
     <productionRule name="buySubmarine">
-      <cost resource="PUs" quantity="5"/>
+      <cost resource="PUs" quantity="4"/>
       <result resourceOrUnit="submarine" quantity="1"/>
     </productionRule>
     <productionRule name="buyDestroyer">
@@ -1781,7 +1781,7 @@
     <attachment name="unitAttachment" attachTo="submarine" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="2"/>
       <option name="isSea" value="true"/>
-      <option name="attack" value="2"/>
+      <option name="attack" value="1"/>
       <option name="defense" value="1"/>
       <option name="blockade" value="2"/>
       <option name="canEvade" value="true"/>
@@ -1804,7 +1804,7 @@
     <attachment name="unitAttachment" attachTo="destroyer" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="2"/>
       <option name="isSea" value="true"/>
-      <!-- <option name="isDestroyer" value="true"/> -->
+      <option name="isDestroyer" value="true"/>
       <option name="attack" value="1"/>
       <option name="defense" value="1"/>
       <option name="blockade" value="1"/>
@@ -1813,7 +1813,7 @@
     </attachment>
     <!-- Cruiser -->
     <attachment name="unitAttachment" attachTo="cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="movement" value="2"/>
+      <option name="movement" value="3"/>
       <option name="isSea" value="true"/>
       <option name="attack" value="3"/>
       <option name="defense" value="2"/>
@@ -1928,6 +1928,7 @@
       <option name="destroyedWhenCapturedBy" value="Germans:Pacific_Commonwealth:Japanese:British:Italians:Chinese:Russians:Americans:French"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="canProduceXUnits" value="3"/>
+      <option name="canOnlyBePlacedInTerritoryValuedAtX" value="-1"/>
       <option name="maxDamage" value="6"/>
     </attachment>
     <!-- Factory Minor -->
@@ -1941,7 +1942,6 @@
     <!-- Factory Major -->
     <attachment name="unitAttachment" attachTo="factory_major" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
-      <option name="canOnlyBePlacedInTerritoryValuedAtX" value="3"/>
       <option name="canProduceXUnits" value="10"/>
       <option name="maxDamage" value="20"/>
       <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
@@ -1955,10 +1955,12 @@
       <option name="maxOperationalDamage" value="2"/>
       <option name="isAirBase" value="true"/>
       <option name="maxScrambleCount" value="2"/>
+      <option name="maxInterceptCount" value="2"/>
       <option name="isConstruction" value="true"/>
       <option name="constructionType" value="airfield_structure"/>
       <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="1"/>
+      <option name="canOnlyBePlacedInTerritoryValuedAtX" value="-1"/>
       <option name="movement" value="0"/>
       <option name="givesMovement" value="2:fighter"/>
       <option name="givesMovement" value="2:bomber"/>
@@ -1976,11 +1978,12 @@
       <option name="constructionType" value="harbour_structure"/>
       <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="1"/>
+      <option name="canOnlyBePlacedInTerritoryValuedAtX" value="-1"/>
       <option name="movement" value="0"/>
       <option name="givesMovement" value="1:transport"/>
-      <option name="givesMovement" value="0:submarine"/>
+      <option name="givesMovement" value="1:submarine"/>
       <option name="givesMovement" value="1:destroyer"/>
-      <option name="givesMovement" value="0:cruiser"/>
+      <option name="givesMovement" value="1:cruiser"/>
       <option name="givesMovement" value="1:carrier"/>
       <option name="givesMovement" value="1:battleship"/>
       <!-- <option name="destroyedWhenCapturedBy" value="Germans:Pacific_Commonwealth:Japanese:British:Italians:Chinese:Russians:Americans:French"/> -->
@@ -5512,8 +5515,8 @@
       <unitPlacement unitType="transport" territory="106 Sea Zone" quantity="1" owner="British"/>
       <unitPlacement unitType="destroyer" territory="109 Sea Zone" quantity="1" owner="British"/>
       <unitPlacement unitType="transport" territory="109 Sea Zone" quantity="1" owner="British"/>
-      <unitPlacement unitType="cruiser" territory="110 Sea Zone" quantity="1" owner="British"/>
       <unitPlacement unitType="battleship" territory="110 Sea Zone" quantity="1" owner="British"/>
+      <unitPlacement unitType="cruiser" territory="110 Sea Zone" quantity="2" owner="British"/>
       <unitPlacement unitType="destroyer" territory="111 Sea Zone" quantity="1" owner="British"/>
       <unitPlacement unitType="battleship" territory="111 Sea Zone" quantity="1" owner="British"/>
       <unitPlacement unitType="cruiser" territory="111 Sea Zone" quantity="1" owner="British"/>
@@ -5560,7 +5563,7 @@
       <unitPlacement unitType="destroyer" territory="72 Sea Zone" quantity="1" owner="French"/>
       <unitPlacement unitType="destroyer" territory="93 Sea Zone" quantity="1" owner="French"/>
       <unitPlacement unitType="cruiser" territory="93 Sea Zone" quantity="1" owner="French"/>
-      <unitPlacement unitType="cruiser" territory="110 Sea Zone" quantity="1" owner="French"/>
+      <unitPlacement unitType="battleship" territory="105 Sea Zone" quantity="1" owner="French"/>
       <!-- Germans -->
       <unitPlacement unitType="infantry" territory="Holland Belgium" quantity="4" owner="Germans"/>
       <unitPlacement unitType="artillery" territory="Holland Belgium" quantity="2" owner="Germans"/>
@@ -5600,11 +5603,13 @@
       <unitPlacement unitType="submarine" territory="103 Sea Zone" quantity="1" owner="Germans"/>
       <unitPlacement unitType="submarine" territory="108 Sea Zone" quantity="1" owner="Germans"/>
       <unitPlacement unitType="battleship" territory="113 Sea Zone" quantity="1" owner="Germans"/>
+      <unitPlacement unitType="cruiser" territory="113 Sea Zone" quantity="1" owner="Germans"/>
       <unitPlacement unitType="cruiser" territory="114 Sea Zone" quantity="1" owner="Germans"/>
       <unitPlacement unitType="transport" territory="114 Sea Zone" quantity="1" owner="Germans"/>
       <unitPlacement unitType="submarine" territory="117 Sea Zone" quantity="1" owner="Germans"/>
       <unitPlacement unitType="submarine" territory="118 Sea Zone" quantity="1" owner="Germans"/>
       <unitPlacement unitType="submarine" territory="124 Sea Zone" quantity="1" owner="Germans"/>
+      <unitPlacement unitType="submarine" territory="78 Sea Zone" quantity="1" owner="Germans"/>
       <!-- Italy -->
       <unitPlacement unitType="infantry" territory="Northern Italy" quantity="2" owner="Italians"/>
       <unitPlacement unitType="artillery" territory="Northern Italy" quantity="2" owner="Italians"/>
@@ -5629,11 +5634,11 @@
       <unitPlacement unitType="artillery" territory="Tobruk" quantity="1" owner="Italians"/>
       <unitPlacement unitType="mech_infantry" territory="Tobruk" quantity="1" owner="Italians"/>
       <unitPlacement unitType="armour" territory="Tobruk" quantity="1" owner="Italians"/>
-      <unitPlacement unitType="destroyer" territory="95 Sea Zone" quantity="1" owner="Italians"/>
+      <unitPlacement unitType="destroyer" territory="95 Sea Zone" quantity="2" owner="Italians"/>
       <unitPlacement unitType="cruiser" territory="95 Sea Zone" quantity="1" owner="Italians"/>
       <unitPlacement unitType="submarine" territory="95 Sea Zone" quantity="1" owner="Italians"/>
       <unitPlacement unitType="transport" territory="95 Sea Zone" quantity="1" owner="Italians"/>
-      <unitPlacement unitType="destroyer" territory="96 Sea Zone" quantity="2" owner="Italians"/>
+      <unitPlacement unitType="destroyer" territory="96 Sea Zone" quantity="1" owner="Italians"/>
       <unitPlacement unitType="transport" territory="96 Sea Zone" quantity="1" owner="Italians"/>
       <unitPlacement unitType="cruiser" territory="97 Sea Zone" quantity="1" owner="Italians"/>
       <unitPlacement unitType="battleship" territory="97 Sea Zone" quantity="1" owner="Italians"/>
@@ -5676,7 +5681,8 @@
       <unitPlacement unitType="aaGun" territory="Sakha" quantity="1" owner="Russians"/>
       <unitPlacement unitType="infantry" territory="Buryatia" quantity="6" owner="Russians"/>
       <unitPlacement unitType="cruiser" territory="115 Sea Zone" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="submarine" territory="115 Sea Zone" quantity="1" owner="Russians"/>
+      <unitPlacement unitType="submarine" territory="115 Sea Zone" quantity="2" owner="Russians"/>
+      <unitPlacement unitType="destroyer" territory="115 Sea Zone" quantity="1" owner="Russians"/>
       <unitPlacement unitType="submarine" territory="127 Sea Zone" quantity="1" owner="Russians"/>
     </unitInitialize>
     <resourceInitialize>
